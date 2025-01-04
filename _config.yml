@@ -1,3 +1,20 @@
-title: Atharva Deshmukh
-show_downloads: true
-theme: jekyll-theme-minimal
+# Minimal Jekyll config for GitHub Pages
+title: "My GitHub Portfolio"
+description: "A simple Jekyll site for showcasing my projects."
+author: "Your Name"
+theme: minima
+baseurl: "" # Do not change if this is your main GitHub Pages site
+url: "https://<your-github-username>.github.io" # Replace with your actual GitHub Pages URL
+
+# Markdown and other settings
+markdown: kramdown
+highlighter: rouge
+
+# If you have any plugins to use with GitHub Pages, list them here
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude any files/folders you don't want Jekyll to process
+exclude:
+  - README.md
