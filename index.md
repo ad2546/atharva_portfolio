@@ -3,26 +3,16 @@ layout: default
 title: "Home"
 ---
 
-# Welcome to My GitHub Portfolio
+![Profile Picture](assets/profile.jpg)
 
-Hello! My name is **Your Name**. This portfolio showcases my projects, code snippets, and anything else I want to share.  
-Feel free to explore and check out my [About](/about) page.
+# Welcome to My Portfolio
 
-## My Recent Projects
+Hi, I’m **Atharva Deshmukh**, a Data Analyst skilled in Python, SQL, Tableau, and Power BI. I specialize in building predictive models, designing scalable ETL pipelines, and creating impactful dashboards. Explore my portfolio to learn about my skills, experience, and projects.
 
-Here are a few highlights of what I've been working on:
+### Explore:
+- [About Me](about.md)
+- [Work Experience](experience.md)
+- [Tableau Projects](projects/tableau.md)
+- [Download My Resume](resumes/atharva_resume.pdf)
 
-1. **Project One**  
-   *A quick description of your first project.*
-
-2. **Project Two**  
-   *A quick description of your second project.*
-
-3. **Project Three**  
-   *A quick description of your third project.*
-
-Want to learn more about me? Check out the [About page](/about).
-
-> **Tip:** You can link directly to your GitHub repositories like this:  
-> [My Repo](https://github.com/<your-github-username>/<repo-name>)
-
+Looking forward to connecting at [ad2546@rit.edu](mailto:ad2546@rit.edu).
