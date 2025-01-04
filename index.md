@@ -13,6 +13,6 @@ Hi, I’m **Atharva Deshmukh**, a Data Analyst skilled in Python, SQL, Tableau, 
 - [About Me](about.md)
 - [Work Experience](experience.md)
 - [Tableau Projects](projects/tableau.md)
-- [Download My Resume](resumes/atharva_resume.pdf)
+- [Download My Resume](resumes/Atharva_Deshmukh_DA_Jan_3.pdf)
 
 Looking forward to connecting at [ad2546@rit.edu](mailto:ad2546@rit.edu).
