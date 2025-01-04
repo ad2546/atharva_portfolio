@@ -9,7 +9,7 @@ Here are some of my Tableau visualizations:
 
 ## Project 1: Fins of the Floodplain  
 <iframe src="https://lookerstudio.google.com/reporting/f70f78b3-fcb5-45b6-8f2b-a0916aef800a" width="100%" height="500"></iframe>
-
+<iframe width="600" height="800" src="https://lookerstudio.google.com/embed/reporting/f70f78b3-fcb5-45b6-8f2b-a0916aef800a/page/p_ve81adcsfd" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
 ## Project 2: Healthcare Insights  
 <iframe src="https://public.tableau.com/views/YourTableauViz2" width="100%" height="500"></iframe>
 
