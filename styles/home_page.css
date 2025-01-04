@@ -25,10 +25,16 @@ header p {
     font-size: 16px;
 }
 
-/* Navigation Styles */
+/* Navigation Styles (Sticky Navbar) */
 nav {
     text-align: center;
-    margin: 20px 0;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
@@ -81,15 +87,10 @@ section li {
     margin-bottom: 10px;
 }
 
-/* Flexbox Layout for Section Containers */
-#Home, #studies, #hobbies, #contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Image Styling */
+/* Centered Image Styling */
 img {
+    display: block;
+    margin: 0 auto;
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }

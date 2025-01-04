@@ -1,1 +1,44 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizations - Atharva Deshmukh</title>
+    <link rel="stylesheet" href="styles/visualizations.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>My Visualizations</h1>
+            <nav>
+                <a href="index.html"><strong>Back to Home</strong></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Visualization Sections -->
+    <main>
+        <section>
+            <h2>Visualization 1: Sales Analysis Dashboard</h2>
+            <iframe src="https://public.tableau.com/views/YourViz1" width="100%" height="500" frameborder="0"></iframe>
+        </section>
+
+        <section>
+            <h2>Visualization 2: Customer Churn Dashboard</h2>
+            <iframe src="https://public.tableau.com/views/YourViz2" width="100%" height="500" frameborder="0"></iframe>
+        </section>
+
+        <section>
+            <h2>Visualization 3: Revenue Trends</h2>
+            <iframe src="https://public.tableau.com/views/YourViz3" width="100%" height="500" frameborder="0"></iframe>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Atharva Deshmukh | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
