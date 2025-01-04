@@ -1,0 +1,26 @@
+# Site Configuration
+title: "Atharva Deshmukh Portfolio"
+description: "A showcase of my work, skills, and experience."
+author: "Atharva Deshmukh"
+baseurl: "/atharva_portfolio" # Leave blank for user/organization GitHub Pages
+url: "https://ad2546.github.io" # Replace with your username
+theme: minima # Using the default GitHub Pages theme for compatibility
+markdown: kramdown
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclusions
+exclude:
+  - "*.md" # Exclude Markdown files if you only want to serve HTML
+  - README.md
+
+# Source file for the site
+defaults:
+  - scope:
+      path: ""
+      type: "html"
+    values:
+      layout: null # Ensures custom HTML files are directly served
