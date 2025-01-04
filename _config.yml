@@ -15,27 +15,10 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-# Navigation (optional)
-collections:
-  nav:
-    - name: "Home"
-      link: /
-    - name: "Education"
-      link: /#education
-    - name: "Experience"
-      link: /#experience
-    - name: "Projects"
-      link: /#projects
-    - name: "Certifications"
-      link: /#certifications
-    - name: "Contact"
-      link: /#contact
 
-# Exclusions
-exclude:
-  - README.md # Prevent README from being processed by Jekyll
 
-# GitHub metadata (optional, for SEO and social preview)
+
+
 github:
   is_project_page: false
   owner: "ad2546" # Replace with your GitHub username
