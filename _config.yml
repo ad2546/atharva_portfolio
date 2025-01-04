@@ -1,8 +1,8 @@
 title: "Atharva Deshmukh Portfolio"
 description: "A comprehensive showcase of my work, skills, and experience."
 author: "Atharva Deshmukh"
-baseurl: "" # Leave blank for root
-url: "https://ad2546.github.io/atharva_portfolio" 
+baseurl: "" # Leave blank for user pages
+url: "https://ad2546.github.io" # Replace with your GitHub username
 theme: minima
 markdown: kramdown
 plugins:
