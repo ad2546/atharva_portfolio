@@ -14,7 +14,7 @@ Hi, I’m **Atharva Deshmukh**, a Data Analyst with expertise in Python, SQL, Ta
 
 ## **Quick Links**
 
-- [Download Resume](resumes/atharva_resume.pdf)
+- [Download Resume](resumes/Atharva_Deshmukh_DA_Jan_3.pdf)
 - [GitHub Profile](https://github.com/your-username)
 - [LinkedIn Profile](https://www.linkedin.com/in/your-profile)
 
@@ -89,5 +89,5 @@ Hi, I’m **Atharva Deshmukh**, a Data Analyst with expertise in Python, SQL, Ta
 ## **Contact**
 
 - **Email:** [ad2546@rit.edu](mailto:ad2546@rit.edu)  
-- **GitHub:** [View Profile](https://github.com/your-username)  
+- **GitHub:** [View Profile](https://github.com/ad2546)  
 - **LinkedIn:** [Connect Here](https://www.linkedin.com/in/your-profile)
