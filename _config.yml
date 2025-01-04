@@ -2,8 +2,8 @@
 title: "Atharva Deshmukh Portfolio"
 description: "A comprehensive showcase of my work, skills, and experience."
 author: "Atharva Deshmukh"
-baseurl: "" # Leave blank for GitHub user/organization pages
-url: "https://<your-github-username>.github.io" # Replace with your GitHub username
+baseurl: "atharva_portfolio" # Leave blank for GitHub user/organization pages
+url: "https://ad2546.github.io" # Replace with your GitHub username
 
 # Theme settings
 theme: minima
@@ -38,5 +38,5 @@ exclude:
 # GitHub metadata (optional, for SEO and social preview)
 github:
   is_project_page: false
-  owner: "<your-github-username>" # Replace with your GitHub username
-  repository: "<repository-name>" # Replace with your repository name
+  owner: "ad2546" # Replace with your GitHub username
+  repository: "atharva_portfolio" # Replace with your repository name
