@@ -7,7 +7,7 @@ title: "Tableau Projects"
 
 Here are some of my Tableau visualizations:
 
-## Project 1: Telecom Churn Analysis  
+## Project 1: Fins of the Floodplain  
 <iframe src="https://lookerstudio.google.com/reporting/f70f78b3-fcb5-45b6-8f2b-a0916aef800a" width="100%" height="500"></iframe>
 
 ## Project 2: Healthcare Insights  
