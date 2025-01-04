@@ -4,7 +4,7 @@ description: "A showcase of my work, skills, and experience."
 author: "Atharva Deshmukh"
 baseurl: "/atharva_portfolio" # Leave blank for user/organization GitHub Pages
 url: "https://ad2546.github.io" # Replace with your username
-theme: minima # Using the default GitHub Pages theme for compatibility
+theme: minima 
 markdown: kramdown
 
 # Plugins
