@@ -2,7 +2,7 @@ title: "Atharva Deshmukh Portfolio"
 description: "A comprehensive showcase of my work, skills, and experience."
 author: "Atharva Deshmukh"
 baseurl: "" # Leave blank for root
-url: "https://ad2546.github.io" 
+url: "https://ad2546.github.io/atharva_portfolio" 
 theme: minima
 markdown: kramdown
 plugins:
