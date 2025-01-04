@@ -2,7 +2,7 @@
 title: "Atharva Deshmukh Portfolio"
 description: "A comprehensive showcase of my work, skills, and experience."
 author: "Atharva Deshmukh"
-baseurl: "atharva_portfolio" # Leave blank for GitHub user/organization pages
+baseurl: "/atharva_portfolio" # Leave blank for GitHub user/organization pages
 url: "https://ad2546.github.io" # Replace with your GitHub username
 
 # Theme settings
