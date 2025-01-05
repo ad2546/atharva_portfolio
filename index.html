@@ -5,6 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atharva Deshmukh - Portfolio</title>
     <link rel="stylesheet" href="styles/home_page.css">
+    <style>
+        /* Smooth Scroll Effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fade-in Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Interactive Hover Effects */
+        nav a {
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6600;
+            border-bottom: 2px solid #ff6600;
+        }
+
+        section {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -24,10 +68,9 @@
     </nav>
 
     <!-- About Me Section -->
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>About Me</h2>
         <img src="assets/media/me.png" alt="Photo of Atharva Deshmukh" width="500">
-
         <p>
             Hi, I'm Atharva Deshmukh, a tech enthusiast with a deep fascination for uncovering patterns and insights from complex datasets. Born and raised in Mumbai, India, I bring a global perspective to data analytics, combining technical expertise with creativity to solve real-world problems.
         </p>
@@ -40,7 +83,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="fade-in">
         <h2>Projects</h2>
         <ul>
             <li>
@@ -53,7 +96,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
+    <section id="experience" class="fade-in">
         <h2>Experience</h2>
         <h3>Software Consultant, Dark Horse Digital Solutions</h3>
         <ul>
@@ -70,7 +113,7 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education">
+    <section id="education" class="fade-in">
         <h2>Education</h2>
         <h3>Rochester Institute of Technology</h3>
         <p>Master of Science in Information Technology and Analytics (GPA: 3.67/4) - May 2025</p>

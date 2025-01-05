@@ -5,6 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualizations - Atharva Deshmukh</title>
     <link rel="stylesheet" href="styles/visualizations.css">
+    <style>
+        /* Smooth Scroll Effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fade-in Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Interactive Hover Effects */
+        header nav a {
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #ff6600;
+            border-bottom: 2px solid #ff6600;
+        }
+
+        section {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -19,20 +63,38 @@
 
     <!-- Visualization Sections -->
     <main>
-        <section>
-            <h2>Visualization 1: Fins of the Floodplain
-            </h2>
-            <iframe width="600" height="800" src="https://lookerstudio.google.com/embed/reporting/f70f78b3-fcb5-45b6-8f2b-a0916aef800a/page/p_ve81adcsfd" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>        </section>
+        <section class="fade-in">
+            <h2>Visualization 1: Fins of the Floodplain</h2>
+            <p>
+                This visualization explores the floodplain regions and the frequency of floods over time. It focuses on hydrological patterns and highlights critical areas affected by recurring floods. The data helps in understanding environmental impacts and planning preventive measures.
+            </p>
+            <iframe width="600" height="800" src="https://lookerstudio.google.com/embed/reporting/f70f78b3-fcb5-45b6-8f2b-a0916aef800a/page/p_ve81adcsfd" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </section>
 
-       
-        <section>
-            <h2>Visualization 2: Opioids use among college students</h2>
-            <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/44a288a3-1b36-4000-b7e6-a648c2738134/page/p_vnb6jemxfd" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>        </section>
-            <section>
-                <h2>Visualization 3: Impact of opioid crisis in America</h2>
-                <iframe width="600" height="800" src="https://lookerstudio.google.com/embed/reporting/5aa1fdf4-4b02-4665-98f6-a04065342e94/page/4WzuD" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>             </section>
-   
-        </main>
+        <section class="fade-in">
+            <h2>Visualization 2: Opioids Use Among College Students</h2>
+            <p>
+                This report delves into opioid usage trends among college students. It identifies patterns of substance abuse, demographic factors, and potential reasons behind the prevalence of opioid use in academic settings. The insights are valuable for policymaking and awareness campaigns.
+            </p>
+            <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/44a288a3-1b36-4000-b7e6-a648c2738134/page/p_vnb6jemxfd" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </section>
+
+        <section class="fade-in">
+            <h2>Visualization 3: Impact of the Opioid Crisis in America</h2>
+            <p>
+                This visualization highlights the devastating impact of the opioid crisis in America. It includes data on overdose rates, geographic hotspots, and the socio-economic costs associated with the crisis. The goal is to raise awareness and support actionable interventions.
+            </p>
+            <iframe width="600" height="800" src="https://lookerstudio.google.com/embed/reporting/5aa1fdf4-4b02-4665-98f6-a04065342e94/page/4WzuD" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </section>
+
+        <section class="fade-in">
+            <h2>Visualization 4: Aircraft Delay Analysis</h2>
+            <p>
+                This visualization provides an analysis of flight delays across various airlines and airports. It examines factors contributing to delays, such as weather, airline operations, and air traffic management, helping to identify bottlenecks and improve operational efficiency.
+            </p>
+            <iframe width="600" height="450" src="https://lookerstudio.google.com/embed/reporting/5f7a6fd7-adb0-453e-9640-af3fee38879b/page/f9gbE" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
