@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizations - Atharva Deshmukh</title>
+    <link rel="stylesheet" href="styles/visualizations.css">
+    <style>
+        /* Smooth Scroll Effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fade-in Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Interactive Hover Effects */
+        header nav a {
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #ff6600;
+            border-bottom: 2px solid #ff6600;
+        }
+
+        section {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <h1>Machine Learning</h1>
+            <nav>
+                <a href="index.html"><strong>Back to Home</strong></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Visualization Sections -->
+    <main>
+        
+
+        <section class="fade-in">
+            <h2>Project 1: Utilizing unstructred data to predict customer churn in telecom provider</h2>
+            <p>
+                This project utilizes customer churn data to predict if a customer will churn or not from a telecom provider using Natural Language Processing.
+            </p>
+
+            <script src="https://gist.github.com/ad2546/21fd1a09f0164a93799bd8662e60c452.js"></script>
+        </section>
+
+
+        <section class="fade-in">
+            <h2>Project 2: Analysing Formula 1 telemetry data</h2>
+            <p>
+                Analysing formula 1 telemetry data to predict top 5 drivers in the whole 2024 season.
+            </p>
+
+            <script src="https://gist.github.com/ad2546/6ae0c0570bbb28fd0df4c65336bcbe52.js"></script>        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Atharva Deshmukh | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
