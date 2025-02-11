@@ -1,6 +1,6 @@
 # Atharva Deshmukh
 
-![Profile Picture](assets/profile.jpg)
+<img src="assets/profile.jpg" alt="Profile Picture" width="150px">
 
 ### Data Analyst | Python | SQL | Tableau
 

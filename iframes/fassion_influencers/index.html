@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Esthétique Moderne - Home</title>
+    <link rel="icon" href="assets/images/Logo.png" type="image/x-icon" >
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/homepage.css">
+
+</head>
+<body >
+    <header>
+        <h1>L'Esthétique <br>Moderne</h1>
+        <nav id="navbar-home">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-links">
+                <li id="close-container"><span id="close-icon">&times;</span></li>
+                <li id ='home-icon'><a href="index.html" class="active">Home</a></li>
+                <li id="aesthetic-icon"><a href="aesthetics.html">Aesthetics</a></li>
+                <li id="influencer-icon"><a href="influencers.html">Influencers</a></li>
+                <li id="events-icon"><a href="events.html">Events</a></li>
+                <li id="brands-icon"><a href="brands.html">Brands</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Video Section -->
+    <div class="video-section" style="position: relative;">
+        <video autoplay muted loop id="background-video">
+            <source src="assets/media/nav-video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="video-text">
+            L'Esthétique <br> Moderne
+        </div>
+    </div>
+    
+
+    <main>
+        <!-- Article Sections -->
+        <section class="article">
+            <img src="assets/images/home/Aesthetic_Essence_Image_.jpeg" alt="Aesthetic Essence Image">
+            <div class="text-content">
+                <h3>The Essence of Modern Aesthetics</h3>
+                <p>L'ESTHÉTIQUE MODERNE is an online publication dedicated to exploring the world of fashion beyond the superficial. We delve into the stories behind the brands, the influencers shaping society, and the aesthetics that define generations. Our mission is to shine a light on the creative forces that mold modern culture, allowing readers to step into a world where art meets lifestyle.</p>
+            </div>
+        </section>
+
+        <section class="article">
+            <img src="assets/images/home/Vogue.webp" alt="Fashion Perspective Image">
+            <div class="text-content">
+                <h3>A New Perspective on Fashion</h3>
+                <p>Fashion is not just about trends; it’s an art form, an avenue for self-expression, and a cultural phenomenon. At L'ESTHÉTIQUE MODERNE, we challenge our readers to think beyond the clothes and accessories, to understand the cultural context that drives these creations. Whether it is the revival of vintage styles or the bold experimentation of high-fashion runways, we bring you stories that explore the intersection of history, society, and modern aesthetics.</p>
+            </div>
+        </section>
+
+        <section class="article">
+            <img src="assets/images/home/influencers.jpeg" alt="Fashion Influencers Image">
+            <div class="text-content">
+                <h3>Influencers Redefining Style</h3>
+                <p>Today's influencers play a pivotal role in shaping fashion tastes and perceptions. From Instagram feeds to TikTok trends, these tastemakers influence millions globally. We dive into the lives and creative processes of some of the most impactful influencers who are redefining style standards. How do they select their signature looks? What inspires their creativity? We answer these questions and more, giving you a peek into the people who are behind the biggest style movements of today.</p>
+            </div>
+        </section>
+
+        <section class="article">
+            <img src="assets/images/home/asthetics.webp" alt="Aesthetic Movements Image">
+            <div class="text-content">
+                <h3>Breaking Down the Aesthetics</h3>
+                <p>Aesthetic movements come and go, but they leave behind a lasting impression. Minimalism, grunge, retro-futurism – each aesthetic defines an era and a mindset. In our deep dive sections, we analyze the evolution of popular aesthetics, what fuels their popularity, and how they reflect societal attitudes. We look at fashion as an ongoing conversation, shaped by artistic vision, economic influences, and shifting cultural paradigms.</p>
+            </div>
+        </section>
+    </main>
+       <!-- Footer -->
+       <footer class="footer-container">
+        <div class="footer-content">
+            <!-- Citation Information -->
+            <section class="footer-section">
+                <h4><a href="citations.html">Citations</a></h4>
+                <p>
+                    This page contains citations in APA format. All references listed here are sourced from credible, peer-reviewed articles, books, and other scholarly resources.
+                </p>
+            </section>
+    
+            <!-- Contact Information -->
+            <section class="footer-section">
+                <h4>Contact Information</h4>
+                <address>
+                    For questions or further information about citations, please contact us at:
+                    <br>
+                    <a href="mailto:ad2546@rit.edu">ad2546@rit.edu</a>
+                    <br>
+                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                </address>
+            </section>
+    
+            <!-- Copyright Information -->
+            <section class="footer-section">
+                <h4>Copyright</h4>
+                <p>&copy; 2024 Your Organization Name. All rights reserved.</p>
+                <p>
+                    Unauthorized reproduction or distribution of this page or its contents is prohibited. 
+                    <a href="https://www.example.com/terms">Terms of Use</a> | 
+                    <a href="https://www.example.com/privacy">Privacy Policy</a>
+                </p>
+            </section>
+        </div>
+    </footer>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    const closeIcon = document.getElementById('close-icon');
+    const nav = document.getElementById('navbar-home'); 
+    const currentPage = document.getElementById('home-icon');
+    if (currentPage) {
+        const link = currentPage.querySelector('a');
+        if (link) {
+            link.style.color = '#555';
+        }
+    }
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.add('active');
+        hamburger.classList.add('blend-in');
+    });
+
+    closeIcon.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('blend-in');
+    });
+
+   
+});
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,250 @@
+/* Importing Vogue Font */
+@font-face {
+    font-family: 'Vogue';
+    src: url('../font/Vogue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mingzat-Regular';
+    src: url('../font/Mingzat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mingzat-Regular', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #E2E2E2;
+    overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav items */
+    align-items: center;
+    padding: 20px 40px; /* Reduce padding to make the header more compact */
+    background-color: #E2E2E2;
+    position: sticky; /* Makes the header sticky */
+    top: 0; /* Sticks to the top of the page */
+    z-index: 1000; /* Higher z-index to keep it on top */
+    width: 100%;
+}
+
+header.secondary {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav items */
+    align-items: center;
+    padding: 20px 40px; /* Reduce padding to make the header more compact */
+    background-color: #000000;
+    color: #E2E2E2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+header h1 {
+    font-family: 'Vogue', serif;
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Navigation Styles */
+nav {
+    position: relative;
+    flex: 1; /* Let the nav take available space */
+    display: flex;
+    justify-content: flex-end; /* Align nav items to the right side */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Increase gap to add more space between items */
+    align-items: center;
+}
+
+/* Navigation Links */
+nav ul li a {
+    font-family: 'Vogue', serif;
+    text-decoration: none;
+    font-size: 2em;
+    justify-content: center;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+
+/* Close Icon in Overlay for Mobile */
+#close-container {
+    display: none; /* Hidden by default */
+}
+
+
+/* Mobile Specific Styles */
+@media (max-width: 955px) {
+   
+
+    nav ul {
+        display: none; /* Hide the nav links on mobile by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw; /* Full screen width */
+        height: 100vh; /* Full screen height */
+        background-color: #4f4f4f;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0;
+        z-index: 5;
+    }
+
+    nav ul.active {
+        display: flex; 
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    #close-container {
+        display: block;
+    }
+}
+
+/* Main Content */
+main {
+   /* max-width: auto; */
+    margin: 50px;
+  /*  padding: auto;*/
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Article Section Styles */
+
+@media (max-width: 955px) {
+    .article {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .article img {
+        max-width: 100%;
+    }
+
+    .article .text-content {
+        padding: 10px;
+        text-align: left;
+    }
+}
+
+.article .text-content {
+    flex: 2;
+    padding: 0 0px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #E2E2E2;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+
+a {
+color: #E2E2E2;
+}
+
+
+/*Footer */
+
+.footer-container {
+    background-color: #000000;
+    color: #E2E2E2;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #E2E2E2;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #E2E2E2;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Citetations*/
+
+.citation-item img {
+    width: 150px; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add space between image and citation text */
+    border-radius: 5px; /* Optional: add rounded corners */
+}

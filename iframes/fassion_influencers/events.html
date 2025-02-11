@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Esthétique Moderne - Events</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aesthetic.css">
+    <link rel="stylesheet" href="assets/css/events.css">
+    <link rel="icon" href="assets/images/Logo.png" type="image/x-icon" >
+
+</head>
+<body>
+    <header class="secondary">
+        <h1>L'Esthétique <br>Moderne</h1>
+        <nav>
+            <div class="hamburger-secondry" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-links" class="secondary">
+                <li id="close-container"><span id="close-icon">&times;</span></li>
+                <li id ='home-icon'><a href="index.html" class="active">Home</a></li>
+                <li id="aesthetic-icon"><a href="aesthetics.html">Aesthetics</a></li>
+                <li id="influencer-icon"><a href="influencers.html">Influencers</a></li>
+                <li id="events-icon"><a href="events.html">Events</a></li>
+                <li id="brands-icon"><a href="brands.html">Brands</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Title Bar for the Events Section -->
+    <div class="title-bar">
+        <h2>Events</h2>
+    </div>
+
+    <!-- Main Content -->
+   <!-- Main Content -->
+<main>
+    <section class="event-container">
+        <!-- Event 1 Card -->
+        <figure class="event-item">
+            <img src="assets/images/events/hopes&heels.webp" alt="Fashion Week">
+            <figcaption class="event-overlay">
+                2024 Hope and Heels Fashion Show and Brunch - 17 November
+            </figcaption>
+        </figure>
+
+        <!-- Event 2 Card -->
+        <figure class="event-item">
+            <img src="assets/images/events/adidasFasssion.jpg" alt="Sustainability Summit">
+            <figcaption class="event-overlay">
+                Adidas Winter Fashion Show - 10 November
+            </figcaption>
+        </figure>
+
+        <!-- Event 3 Card -->
+        <figure class="event-item">
+            <img src="assets/images/events/milan.jpeg" alt="Vintage Expo">
+            <figcaption class="event-overlay">
+                Milan Fashion Week - 11 January
+            </figcaption>
+        </figure>
+
+        <!-- Event 4 Card -->
+        <figure class="event-item">
+            <img src="assets/images/events/paris.avif" alt="Fashion & Tech">
+            <figcaption class="event-overlay">
+                Paris Fashion Week - 11 January
+            </figcaption>
+        </figure>
+
+        <!-- Event 5 Card -->
+        <figure class="event-item">
+            <img src="assets/images/events/nyFassion.webp" alt="Art and Style Gala">
+            <figcaption class="event-overlay">
+                New York Fashion Week - 7 February
+            </figcaption>
+        </figure>
+
+        <!-- Event 6 Card -->
+        <figure class="event-item">
+            <img src="assets/images/events/Bridal.jpg" alt="Fashion Impact Awards">
+            <figcaption class="event-overlay">
+                Bridal Fashion Week New York - 2 April
+            </figcaption>
+        </figure>
+
+        <!-- Event 7 Card -->
+        <figure class="event-item">
+            <img src="assets/images/events/london.webp" alt="Eco Fashion Showcase">
+            <figcaption class="event-overlay">
+                London Fashion Week - 15 February
+            </figcaption>
+        </figure>
+    </section>
+</main>
+
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-content">
+            <!-- Citation Information -->
+            <section class="footer-section">
+                <h4><a href="citations.html">Citations</a></h4>
+                <p>
+                    This page contains citations in APA format. All references listed here are sourced from credible, peer-reviewed articles, books, and other scholarly resources.
+                </p>
+            </section>
+    
+            <!-- Contact Information -->
+            <section class="footer-section">
+                <h4>Contact Information</h4>
+                <address>
+                    For questions or further information about citations, please contact us at:
+                    <br>
+                    <a href="mailto:ad2546@rit.edu">ad2546@rit.edu</a>
+                    <br>
+                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                </address>
+            </section>
+    
+            <!-- Copyright Information -->
+            <section class="footer-section">
+                <h4>Copyright</h4>
+                <p>&copy; 2024 Your Organization Name. All rights reserved.</p>
+                <p>
+                    Unauthorized reproduction or distribution of this page or its contents is prohibited. 
+                    <a href="https://www.example.com/terms">Terms of Use</a> | 
+                    <a href="https://www.example.com/privacy">Privacy Policy</a>
+                </p>
+            </section>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+        // JavaScript to handle hamburger menu toggle and close button
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+            const closeIcon = document.getElementById('close-icon');
+            const currentPage = document.getElementById('events-icon');
+         if (currentPage) {
+        const link = currentPage.querySelector('a');
+        if (link) {
+            link.style.color = '#555';
+        }
+             }
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.add('active');
+                hamburger.classList.add('blend-in');
+            });
+
+            closeIcon.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('blend-in');
+            });
+        });
+    </script>
+</body>
+</html>

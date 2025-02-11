@@ -1,0 +1,291 @@
+
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mingzat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #E2E2E2;
+}
+
+/* Header Styles */
+header.secondary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #000000;
+    color: #E2E2E2;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    overflow: hidden;
+}
+
+header h1 {
+    font-family: 'Vogue', serif;
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Navigation Styles */
+nav {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Navigation Links */
+nav ul li a {
+    font-family: 'Vogue', serif;
+    color: #E2E2E2;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+/* Hamburger Icon Styles */
+.hamburger, .hamburger-secondry {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    justify-content: space-between;
+    gap: 5px;
+    z-index: 20;
+}
+
+.hamburger span, .hamburger-secondry span {
+    display: block;
+    height: 3px;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger span {
+    background: #000;
+}
+
+.hamburger-secondry span {
+    background: #ffffff;
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 955px) {
+    header.secondary {
+        padding: 15px 20px;
+    }
+
+    .hamburger, .hamburger-secondry {
+        display: flex;
+    }
+
+    nav ul {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 1);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0;
+        z-index: 5;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    #close-container {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #ffffff;
+        font-size: 2em;
+        cursor: pointer;
+    }
+}
+
+/* Aesthetics Bar Styles */
+.title-bar {
+    background-color: #000000;
+    color: #E2E2E2;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.title-bar h2 {
+    font-family: 'Vogue', serif;
+    font-size: 2em;
+    margin: 0;
+}
+
+.aesthetics-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    background-color: #E2E2E2;
+}
+
+/* Aesthetic Item Styling */
+.aesthetic-item {
+    position: relative;
+    background-color: #d3d3d3;
+    overflow: hidden;
+    cursor: pointer;
+    margin: auto;
+    width: 100%; 
+    max-width: 400px; 
+    height: auto; 
+    aspect-ratio: 4/5; 
+    transition: all 0.3s ease-in-out;
+}
+
+.aesthetic-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.aesthetic-content img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    transition: filter 0.3s ease-in-out; 
+}
+
+.aesthetic-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #E2E2E2;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Vogue', serif;
+    font-size: 24px;
+    max-width: 100%; /* Prevents overflow on smaller screens */
+    overflow: hidden; /* Hides overflow */
+    text-overflow: ellipsis; /* Adds ellipsis for overflow */
+    white-space: nowrap; /* Keeps text on one line */
+}
+
+.aesthetic-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #E2E2E2;
+    padding: 20px;
+    font-family: 'Mingzat', serif;
+    font-size: 1.25em;
+    max-width: 100%; /* Prevents overflow on smaller screens */
+    overflow-wrap: break-word; /* Ensures long words break */
+    overflow-y: auto; /* Allows vertical scrolling if necessary */
+    margin: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.aesthetic-item:hover .aesthetic-description {
+    opacity: 1; 
+}
+
+.aesthetic-item:hover .aesthetic-content img {
+    filter: brightness(20%); 
+}
+
+/* Responsive adjustments */
+@media (max-width: 1344px) {
+    .aesthetics-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .aesthetic-item {
+        width: 350px;
+        height: 450px;
+    }
+
+    .aesthetic-description {
+        font-size: 1em; 
+        padding: 15px; 
+    }
+}
+
+@media (max-width: 955px) {
+    .aesthetics-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .aesthetic-item {
+        width: 100%; /* Full width on mobile screens */
+        max-width: 100%; /* Remove max width for mobile */
+        height: auto; /* Adjust height */
+        margin: auto;
+    }
+
+    .aesthetic-title {
+        font-size: 1.5em;
+    }
+
+    .aesthetic-description {
+        font-size: 1em; 
+        padding: 15px; 
+    }
+}
+
+#close-icon {
+    font-size: 1em;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #E2E2E2;
+}
+
+a {
+    color: #000000;
+}
+.hidden {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.blend-in {
+    opacity: 0%; /* Adjust the blend-in effect */
+}

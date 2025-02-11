@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finger Lakes: 8-Bit Adventure</title>
+    <link rel="stylesheet" href="styles/styles_3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Embark on a Retro Adventure</h2>
+        <p>The Finger Lakes Region in 8-Bit Glory!</p>
+        <a href="#overview" class="cta-button">Start Game</a>
+    </section>
+  <!-- Header Section -->
+
+    <header class="main-header" id="headder">
+        <h1>Finger Lakes</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#geology">Geology</a></li>
+                <li><a href="#events">Events</a></li>
+       
+            </ul>
+        </nav>
+    </header> 
+    <!-- Main Content -->
+    <main>
+   
+        <!-- Overview Section -->
+        <section id="overview" class="grid-section">
+            <h2>Overview</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <picture>
+                        <source srcset="images/senneca-640w.jpg" media="(max-width: 768px)">
+                        <source srcset="images/senneca-1024w.jpg" media="(min-width: 769px)">
+                        <img src="images/senneca-1024w.jpg" alt="Scenic view of Senneca Falls">
+                    </picture>                    <p>The Finger Lakes region in upstate New York is a treasure trove of natural beauty and cultural experiences. It offers a peaceful escape by the water, wineries, and thrilling adventures in the great outdoors.</p>
+                </div>
+                <div class="grid-item">
+                    <picture>
+                        <source srcset="images/spa-640w.jpg" media="(max-width: 768px)">
+                        <source srcset="images/spa-1024w.jpg" media="(min-width: 769px)">
+                        <img src="images/spa-1024w.jpg" alt="Luxurious spa resort in the Finger Lakes">
+                    </picture>
+                     <p>If relaxation is your goal, the Finger Lakes offers serene spa resorts and boutique accommodations with breathtaking views and farm-to-table meals.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="grid-section">
+            <h2>History</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <picture>
+                        <source srcset="images/map-640w.jpg" media="(max-width: 768px)">
+                        <source srcset="images/map-1024w.jpg" media="(min-width: 769px)">
+                        <img src="images/map-1024w.jpg" alt="Map of the Finger Lakes region">
+                    </picture>                    
+                    <p>The Finger Lakes has a history as rich as its landscapes, from the Haudenosaunee Confederacy to the Women’s Rights National Historical Park in Seneca Falls.</p>
+                </div>
+                <div class="grid-item">
+                    <picture>
+                        <source srcset="images/women-640w.jpg" media="(max-width: 768px)">
+                        <source srcset="images/women-1024w.jpg" media="(min-width: 769px)">
+                        <img src="images/women-1024w.jpg" alt="Historic suffrage movement in the Finger Lakes">
+                    </picture>
+                    <p>The region played a pivotal role in the abolitionist movement and the fight for women’s suffrage, making it a key historical destination.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="geology" class="grid-section">
+            <h2>Environment & Geology</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <picture>
+                        <source srcset="images/glen-640w.jpg" media="(max-width: 768px)">
+                        <source srcset="images/glen-1024w.jpg" media="(min-width: 769px)">
+                        <img src="images/glen-1024w.jpg" alt="Watkins Glen gorge in the Finger Lakes">
+                    </picture>
+                    <p>The Finger Lakes owe their dramatic landscapes to glacial activity during the last ice age. Massive glaciers carved out the valleys, leaving behind steep gorges, towering waterfalls, and fertile soil that has become the lifeblood of the region’s agriculture.</p>
+                </div>
+                <div class="grid-item">
+                    <picture>
+                        <source srcset="images/wine-640w.jpg" media="(max-width: 768px)">
+                        <source srcset="images/wine-1024w.jpg" media="(min-width: 769px)">
+                        <img src="images/wine-1024w.jpg" alt="Vineyards in the Finger Lakes region">
+                    </picture>
+                    <p>The region’s geology also supports one of its most celebrated industries: winemaking. The fertile soil and unique microclimates have made the Finger Lakes a premier wine destination.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="grid-section">
+            <h2>Current Events & Activities</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <picture>
+                        <source srcset="images/festival-640w.jpg" media="(max-width: 768px)">
+                        <source srcset="images/festival-1024w.jpg" media="(min-width: 769px)">
+                        <img src="images/festival-1024w.jpg" alt="Wine festival in the Finger Lakes">
+                    </picture>        
+                    <p>The Finger Lakes region is a hub of year-round activity, offering something for everyone, no matter the season.</p>
+                </div>
+                <div class="grid-item">
+                    <picture>
+                        <source srcset="images/food-640w.jpg" media="(max-width: 768px)">
+                        <source srcset="images/food-1024w.jpg" media="(min-width: 769px)">
+                        <img src="images/food-1024w.jpg" alt="Farm-to-table dining experience in the Finger Lakes">
+                    </picture>        
+                    <p>Foodies will rejoice in the Finger Lakes’ farm-to-table culinary scene, where chefs craft meals with ingredients sourced directly from local farms.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Footer Section -->
+      
+    <footer>
+        <p>Created by Atharva Deshmukh - December 2024</p>
+        <p>Image credits: Unsplash, Pexels </p>
+        <p>Jess. (2024, November 18). Finger Lakes National Forest / Women’s Rights NHS. Saving Time in a Bottle. https://savingtimeinabottle.com/2024/11/18/finger-lakes-national-forest-womens-rights-nhs/</p>
+    <p>Patterson, D. (2023, May 20). Niagara Falls—Still A Great Wonder Of The World. InkFreeNews.Com. https://www.inkfreenews.com/2023/05/20/niagara-falls-still-a-great-wonder-of-the-world/
+    </p>
+    <p>
+        Photo by Andrea Davis on Pexels. (n.d.). Pexels. Retrieved December 7, 2024, from https://www.pexels.com/photo/brown-wooden-boat-on-green-grass-10511497/
+    </p>
+    <p>
+
+        Photo by Carol Bell on Pexels. (n.d.). Pexels. Retrieved December 7, 2024, from https://www.pexels.com/photo/seneca-lake-harbor-9600479/
+   
+    </p>
+    </footer>
+    </main>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const hiddenElements = document.querySelectorAll(".hidden");
+
+    const observerOptions = {
+        root: null, // Observe in the viewport
+        rootMargin: "0px",
+        threshold: 0.1, // Trigger when 10% of the element is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("scroll-fadeIn");
+                observer.unobserve(entry.target); // Stop observing once animated
+            }
+        });
+    }, observerOptions);
+
+    hiddenElements.forEach(element => observer.observe(element));
+
+    // Highlight navigation links based on scroll position
+    const sections = document.querySelectorAll("section, footer"); // Include footer in the section list
+    const navLinks = document.querySelectorAll(".main-nav a");
+    const header = document.querySelector(".main-header");
+    const navMenu = document.getElementById("main-nav");
+
+    // Add offset adjustment when clicking navigation links
+    navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+        const targetId = link.getAttribute("href");
+        if (targetId.startsWith("#")) {
+            // Smooth scroll for in-page navigation
+            e.preventDefault();
+            const section = document.querySelector(targetId);
+            if (section) {
+                const headerHeight = header.offsetHeight;
+                const sectionTop = section.offsetTop - headerHeight - 10;
+
+                window.scrollTo({
+                    top: sectionTop,
+                    behavior: "smooth",
+                });
+            }
+        } else {
+            // Let the browser handle external navigation
+            navMenu.classList.remove("open"); // Close menu for mobile navigation
+        }
+    });
+});
+
+
+    window.addEventListener("scroll", () => {
+        let currentSection = "";
+
+        sections.forEach(section => {
+            const headerHeight = header.offsetHeight; // Dynamically calculate header height
+            const sectionTop = section.offsetTop - headerHeight - 50; // Add buffer for sticky header
+            const sectionHeight = section.offsetHeight;
+
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                currentSection = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.toggle("active", link.getAttribute("href").substring(1) === currentSection);
+        });
+
+        // Close the hamburger menu on scroll
+        if (navMenu.classList.contains("open")) {
+            navMenu.classList.remove("open");
+        }
+    });
+
+    // Toggle the menu with offset adjustment
+    const hamburger = document.querySelector(".hamburger");
+
+    function toggleMenu() {
+        const headerHeight = header.offsetHeight; // Calculate header height dynamically
+        navMenu.style.top = `${headerHeight}px`; // Position menu directly under the header
+        navMenu.classList.toggle("open");
+    }
+
+    hamburger.addEventListener("click", toggleMenu);
+
+    // Optional: Close the menu when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            navMenu.classList.remove("open");
+        }
+    });
+
+    // Adjust menu position on resize
+    window.addEventListener("resize", () => {
+        if (navMenu.classList.contains("open")) {
+            const headerHeight = header.offsetHeight;
+            navMenu.style.top = `${headerHeight}px`;
+        }
+    });
+});
+
+
+</script>
+</body>
+
+ 
+</html>

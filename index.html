@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharva Deshmukh - Portfolio</title>
+    <link rel="stylesheet" href="styles/home_page.css">
+    <style>
+        /* Smooth Scroll Effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fade-in Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Interactive Hover Effects */
+        nav a {
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6600;
+            border-bottom: 2px solid #ff6600;
+        }
+
+        section {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Atharva Deshmukh</h1>
+        <p>Data Analyst | Passionate About Turning Data into Insights</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#about"><strong>About Me</strong></a>
+        <a href="#projects"><strong>Projects</strong></a>
+        <a href="#experience"><strong>Experience</strong></a>
+        <a href="#education"><strong>Education</strong></a>
+        <a href="assets/Atharva_Deshmukh_Data_Analyst_02_04.pdf" download><strong>Download Resume</strong></a>
+    </nav>
+
+    <!-- About Me Section -->
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <img src="assets/media/me.JPG" alt="Photo of Atharva Deshmukh" width="500">
+        <p>
+            Hi, I'm Atharva Deshmukh, a tech enthusiast with a deep fascination for uncovering patterns and insights from complex datasets. Born and raised in Mumbai, India, I bring a global perspective to data analytics, combining technical expertise with creativity to solve real-world problems.
+        </p>
+        <p>
+            Currently pursuing my Master's in Information Technology and Analytics at Rochester Institute of Technology, I thrive on challenges that involve digging into data, building predictive models, and crafting compelling visualizations. Whether it's optimizing a healthcare system or predicting customer behavior, I approach each project with curiosity and determination.
+        </p>
+        <p>
+            Outside of work, I enjoy experimenting in the kitchen, traveling to discover new cultures, and keeping fit through regular workouts. These hobbies fuel my creativity and help me stay balanced in a fast-paced world.
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="fade-in">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <strong>Telecom Churn Prediction:</strong> Built a predictive model using NLP on unstructured data, improving accuracy by 12%. This project was a testament to the power of combining technical expertise with a user-focused approach to solving business challenges.
+            </li>
+            <li>
+                <strong>Healthcare Analytics:</strong> Created Power BI dashboards to analyze inefficiencies in New York’s healthcare system, leading to a 12% cost reduction. This work reinforced my belief in the transformative power of data-driven decisions.
+            </li>
+        </ul>
+        <h2>Project Links</h2>
+        <ul>
+            <li>
+                <a href="visualizations.html"><strong>Visualizations</strong></a>
+
+            </li>
+            <li>
+                <a href="ml.html"><strong>Machine Learning</strong></a>
+            </li>
+            <li>
+                <a href="design.html"><strong>Web Design</strong></a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="fade-in">
+        <h2>Experience</h2>
+        <h3>Software Consultant, Dark Horse Digital Solutions</h3>
+        <ul>
+            <li>Streamlined data pipelines, reducing processing time by 30% through automation and optimized workflows.</li>
+            <li>Designed scalable ETL processes processing over 1TB of data daily, achieving a 20% efficiency gain.</li>
+            <li>Collaborated with cross-functional teams, delivering actionable insights for insurance-sector clients, which directly contributed to their business strategy improvements.</li>
+        </ul>
+        <h3>Teaching Assistant, Rochester Institute of Technology</h3>
+        <ul>
+            <li>Facilitated discussions on data ethics, privacy, and the principles of artificial intelligence.</li>
+            <li>Guided students in mastering data analysis and machine learning concepts, ensuring they were equipped to tackle real-world challenges.</li>
+            <li>Found immense satisfaction in mentoring, watching students grow, and contributing to their success stories.</li>
+        </ul>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="fade-in">
+        <h2>Education</h2>
+        <h3>Rochester Institute of Technology</h3>
+        <p>Master of Science in Information Technology and Analytics (GPA: 3.67/4) - May 2025</p>
+        <h3>University of Mumbai</h3>
+        <p>Bachelor of Engineering in Computer Engineering (GPA: 7.4/10) - May 2021</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Atharva Deshmukh | Turning Data into Insights</p>
+    </footer>
+</body>
+</html>
