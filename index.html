@@ -1,141 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atharva Deshmukh - Portfolio</title>
-    <link rel="stylesheet" href="styles/home_page.css">
-    <style>
-        /* Smooth Scroll Effect */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Fade-in Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 1s ease-out forwards;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Interactive Hover Effects */
-        nav a {
-            transition: color 0.3s ease, border-bottom 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #ff6600;
-            border-bottom: 2px solid #ff6600;
-        }
-
-        section {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        section:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-    </style>
+    <title>Atharva Deshmukh</title>
+    <link rel="stylesheet" href="styles/revamped_style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <h1>Atharva Deshmukh</h1>
-        <p>Data Analyst | Passionate About Turning Data into Insights</p>
+        <div class="header-text">
+            <h1>Atharva Deshmukh</h1>
+            <p>Data Scientist | Agentic AI | Python</p>
+        </div>
     </header>
-
-    <!-- Navigation -->
     <nav>
-        <a href="#about"><strong>About Me</strong></a>
-        <a href="#projects"><strong>Projects</strong></a>
-        <a href="#experience"><strong>Experience</strong></a>
-        <a href="#education"><strong>Education</strong></a>
-        <a href="resumes/Atharva Deshmukh_Data_Engineer_Apr_1.pdf" download><strong>Download Resume</strong></a>
+        <span class="nav-logo">Atharva Deshmukh</span>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="https://www.linkedin.com/in/atharva-deshmuk/" target="_blank">LinkedIn</a>
+        <a href="resumes/Atharva_Deshmukh_Data_Scientist (4).pdf" target="_blank">Resume</a>
     </nav>
-
-    <!-- About Me Section -->
-    <section id="about" class="fade-in">
-        <h2>About Me</h2>
-        <img src="assets/media/me.JPG" alt="Photo of Atharva Deshmukh" width="500">
-        <p>
-            Hi, I'm Atharva Deshmukh, a tech enthusiast with a deep fascination for uncovering patterns and insights from complex datasets. Born and raised in Mumbai, India, I bring a global perspective to data analytics, combining technical expertise with creativity to solve real-world problems.
-        </p>
-        <p>
-            Currently pursuing my Master's in Information Technology and Analytics at Rochester Institute of Technology, I thrive on challenges that involve digging into data, building predictive models, and crafting compelling visualizations. Whether it's optimizing a healthcare system or predicting customer behavior, I approach each project with curiosity and determination.
-        </p>
-        <p>
-            Outside of work, I enjoy experimenting in the kitchen, traveling to discover new cultures, and keeping fit through regular workouts. These hobbies fuel my creativity and help me stay balanced in a fast-paced world.
-        </p>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="fade-in">
-        <h2>Projects</h2>
+    <main>
+        <section id="about" class="fade-in-section">
+            <h2>About Me</h2>
+            
+            <p>I am a Data Scientist and AI Engineer with 3+ years of experience designing and deploying machine learning, deep learning, and generative AI systems across finance, healthcare, and sustainability domains. My work spans from building fraud detection models with 95% accuracy, to developing geospatial AI pipelines for wildfire prevention, and engineering LLM-powered multi-agent systems for resume–job matching. Skilled in Python, SQL, Spark, TensorFlow, PyTorch, LangChain, and MLOps (MLflow, Kubernetes, CI/CD), I specialize in transforming raw data into business-ready insights and production-scale solutions. With strong foundations in cloud platforms (AWS, Azure, GCP) and data engineering pipelines, I focus on creating AI systems that are explainable, scalable, and business-driven.</p>
+            
+            <h3>My Journey</h3>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-date">Sep 2025 - Present <span class="duration">(0 yrs 0 mos)</span></div>
+                    <div class="timeline-content">
+                        <h4>CrowdDoing NGO</h4>
+                        <h5>Solutions Architect AI Integration</h5>
+                        </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2023 - May 2025 <span class="duration">(1 yr 9 mos)</span></div>
+                    <div class="timeline-content">
+                        <h4>Rochester Institute of Technology (RIT)</h4>
+                        <h5>MS Information Technology and Analytics</h5>
+                        <p>Rochester, NY</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2022 - Jul 2023 <span class="duration">(11 mos)</span></div>
+                    <div class="timeline-content">
+                        <h4>Dark Horse Digital Solutions</h4>
+                        <h5>Data Scientist</h5>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Jun 2021 - Jul 2022 <span class="duration">(1 yr 1 mo)</span></div>
+                    <div class="timeline-content">
+                        <h4>Dark Horse Digital Solutions</h4>
+                        <h5>Data Scientist</h5>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">May 2020 - Jul 2020 <span class="duration">(2 mos)</span></div>
+                    <div class="timeline-content">
+                        <h4>VESIT Renaissance</h4>
+                        <h5>Data Analytics Intern</h5>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Jul 2017 - May 2021 <span class="duration">(3 yrs 10 mos)</span></div>
+                    <div class="timeline-content">
+                        <h4>University of Mumbai</h4>
+                        <h5>BS in Computer Engineering</h5>
+                        <p>Mumbai, India</p>
+                    </div>
+                </div>
+            </div>
+            <h3>Certifications</h3>
+            <ul>
+                <li><strong>Microsoft Certified: Azure Data Scientist Associate:</strong> Credential ID: C2F98ADE9E9ECB9D</li>
+            </ul>
+        </section>
+        <section id="projects" class="fade-in-section">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>LLM Based Resume Scorer</h3>
+                    <p class="project-domain">Agentic AI</p>
+                    <p>An AI-powered application that leverages large language models to predict and optimize resume–job description matches for improved ATS screening.</p>
+                    <a href="https://github.com/ad2546/LLM_ATS" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Vizard AI</h3>
+                    <p class="project-domain">Agentic AI</p>
+                    <p>Created an AI platform using Langchain to generate business relevant visualizations.</p>
+                    <a href="https://data-viz-app-2y326jhgfa-uc.a.run.app/" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Smoking Analysis Dashboard</h3>
+                    <p class="project-domain">Data Analysis</p>
+                    <p>An interactive dashboard that visualizes smoking trends, health impacts, and demographic patterns to support data-driven public health insights.</p>
+                    <a href="https://public.tableau.com/views/Smoking_Study_Analysis/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Stars Yapp: A Generative AI Based Astrology Predictor</h3>
+                    <p class="project-domain">Agentic AI</p>
+                    <p>A generative AI-powered astrology predictor that delivers personalized horoscope insights using LLMs and retrieval-augmented generation.</p>
+                    <a href="https://www.youtube.com/watch?v=4a222XViI38" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Deploying Machine Learning model on AWS Sagemaker</h3>
+                    <p class="project-domain">Machine Learning</p>
+                    <p>Built a machine learning model to predict phone prices and deployed it as a scalable application on AWS.</p>
+                    <a href="https://colab.research.google.com/drive/1NpvpR29D5jOViSEGs63yO-cRe9jra8qP?usp=sharing" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Analysing Formula 1 telemetry data</h3>
+                    <p class="project-domain">Data Analysis</p>
+                    <p>Analyzed Formula 1 telemetry data to model driver performance and build predictive insights into race outcomes.</p>
+                    <a href="https://www.linkedin.com/posts/atharva-deshmuk_f1-datascience-rstats-activity-7314843030400745473-1lvi?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvvykkB_ecNOQ0g9IiEsMqRyDPTRJawVsk" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Utilizing unstructred data to predict customer churn in telecom provider</h3>
+                    <p class="project-domain">Machine Learning</p>
+                    <p>Built an NLP-based model to predict customer churn by analyzing text data such as reviews and support interactions, enabling proactive retention strategies.</p>
+                    <a href="https://colab.research.google.com/drive/1AUi7Vk49G97ErD0HoGQoXSwnAHXoPPqq?usp=sharing" target="_blank">View Project</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="fade-in-section">
+        <p>&copy; 2024 Atharva Deshmukh | All Rights Reserved</p>
         <ul>
-            <li>
-                <strong>Telecom Churn Prediction:</strong> Built a predictive model using NLP on unstructured data, improving accuracy by 12%. This project was a testament to the power of combining technical expertise with a user-focused approach to solving business challenges.
-            </li>
-            <li>
-                <strong>Healthcare Analytics:</strong> Created Power BI dashboards to analyze inefficiencies in New York’s healthcare system, leading to a 12% cost reduction. This work reinforced my belief in the transformative power of data-driven decisions.
-            </li>
+            <li>Email: <a href="mailto:ad2546@rit.edu">ad2546@rit.edu</a></li>
+            <li>GitHub: <a href="https://github.com/ad2546">View Profile</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/atharva-deshmuk/">Connect Here</a></li>
         </ul>
-        <h2>Project Links</h2>
-        <ul>
-            <li>
-                <a href="visualizations.html"><strong>Visualizations</strong></a>
-
-            </li>
-            <li>
-                <a href="ml.html"><strong>Machine Learning</strong></a>
-            </li>
-            <li>
-                <a href="design.html"><strong>Web Design</strong></a>
-            </li>
-        </ul>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="fade-in">
-        <h2>Experience</h2>
-        <h3>Software Consultant, Dark Horse Digital Solutions</h3>
-        <ul>
-            <li>Streamlined data pipelines, reducing processing time by 30% through automation and optimized workflows.</li>
-            <li>Designed scalable ETL processes processing over 1TB of data daily, achieving a 20% efficiency gain.</li>
-            <li>Collaborated with cross-functional teams, delivering actionable insights for insurance-sector clients, which directly contributed to their business strategy improvements.</li>
-        </ul>
-        <h3>Teaching Assistant, Rochester Institute of Technology</h3>
-        <ul>
-            <li>Facilitated discussions on data ethics, privacy, and the principles of artificial intelligence.</li>
-            <li>Guided students in mastering data analysis and machine learning concepts, ensuring they were equipped to tackle real-world challenges.</li>
-            <li>Found immense satisfaction in mentoring, watching students grow, and contributing to their success stories.</li>
-        </ul>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="fade-in">
-        <h2>Education</h2>
-        <h3>Rochester Institute of Technology</h3>
-        <p>Master of Science in Information Technology and Analytics (GPA: 3.67/4) - May 2025</p>
-        <h3>University of Mumbai</h3>
-        <p>Bachelor of Engineering in Computer Engineering (GPA: 7.4/10) - May 2021</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Atharva Deshmukh | Turning Data into Insights</p>
     </footer>
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        const options = {
+            root: null, // viewport
+            threshold: 0.5 // 50% of the section must be visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    navLinks.forEach(link => {
+                        link.classList.remove('active-nav-link');
+                        if (link.getAttribute('href').includes(id)) {
+                            link.classList.add('active-nav-link');
+                        }
+                    });
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        const fadeSections = document.querySelectorAll('.fade-in-section');
+
+        const fadeObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    fadeObserver.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.1 // Trigger when 10% of the section is visible
+        });
+
+        fadeSections.forEach(section => {
+            fadeObserver.observe(section);
+        });
+    </script>
 </body>
 </html>
