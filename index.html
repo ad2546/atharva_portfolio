@@ -10,15 +10,26 @@
     <header>
         <div class="header-text">
             <h1>Atharva Deshmukh</h1>
-            <p>Data Scientist | Agentic AI | Python</p>
+            <p>Exploring new heights with Data & AI</p>
         </div>
+        <a href="#about" class="scroll-down-icon" aria-label="Scroll down to About Me section">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
     </header>
     <nav>
         <span class="nav-logo">Atharva Deshmukh</span>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="https://www.linkedin.com/in/atharva-deshmuk/" target="_blank">LinkedIn</a>
-        <a href="resumes/Atharva_Deshmukh_Data_Scientist (4).pdf" target="_blank">Resume</a>
+        <button class="hamburger" aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <div class="nav-links">
+            <a href="#about">About Me</a>
+            <a href="#my-journey">My Journey</a>
+            <a href="#projects">Projects</a>
+            <a href="https://www.linkedin.com/in/atharva-deshmuk/" target="_blank">LinkedIn</a>
+            <a href="resumes/Atharva_Deshmukh_Data_Scientist (4).pdf" target="_blank">Resume</a>
+        </div>
     </nav>
     <main>
         <section id="about" class="fade-in-section">
@@ -26,57 +37,84 @@
             
             <p>I am a Data Scientist and AI Engineer with 3+ years of experience designing and deploying machine learning, deep learning, and generative AI systems across finance, healthcare, and sustainability domains. My work spans from building fraud detection models with 95% accuracy, to developing geospatial AI pipelines for wildfire prevention, and engineering LLM-powered multi-agent systems for resume–job matching. Skilled in Python, SQL, Spark, TensorFlow, PyTorch, LangChain, and MLOps (MLflow, Kubernetes, CI/CD), I specialize in transforming raw data into business-ready insights and production-scale solutions. With strong foundations in cloud platforms (AWS, Azure, GCP) and data engineering pipelines, I focus on creating AI systems that are explainable, scalable, and business-driven.</p>
             
-            <h3>My Journey</h3>
+            <h3>Skills</h3>
+            <div class="skills-category">
+                <h4>Data Analysis and Visualizations:</h4>
+                <p>Python (Pandas, NumPy, Matplotlib, Scikit-learn), SQL, Tableau, Power BI, MS Excel (advanced), Looker</p>
+            </div>
+            <div class="skills-category">
+                <h4>Programming Languages:</h4>
+                <p>Python, SQL, R, Java, JavaScript, NoSQL, C</p>
+            </div>
+            <div class="skills-category">
+                <h4>Databases and Tools:</h4>
+                <p>MongoDB, MS SQL Server, Oracle SQL, Snowflake, JDBC, SAS, Kettle, REST API, SOAP API</p>
+            </div>
+
+            <h3>Certifications</h3>
+            <ul>
+                <li><strong>Microsoft Certified: Azure Data Scientist Associate:</strong> Credential ID: C2F98ADE9E9ECB9D</li>
+            </ul>
+        </section>
+
+        <section id="my-journey" class="fade-in-section">
+            <h2>My Journey</h2>
             <div class="timeline-container">
-                <div class="timeline-item">
+                <div class="timeline-item experience-item">
                     <div class="timeline-date">Sep 2025 - Present <span class="duration">(0 yrs 0 mos)</span></div>
                     <div class="timeline-content">
                         <h4>CrowdDoing NGO</h4>
                         <h5>Solutions Architect AI Integration</h5>
-                        </div>
+                        <p>At CrowdDoing NGO, I applied deep learning and geospatial AI to identify high-risk fire zones, reducing false positive alerts by 30% and optimizing resource allocation. I collaborated with stakeholders to develop real-time dashboards and decision support systems, accelerating response times by 25% during catastrophic fire events and improving crisis communication.</p>
+                    </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item education-item">
                     <div class="timeline-date">Aug 2023 - May 2025 <span class="duration">(1 yr 9 mos)</span></div>
                     <div class="timeline-content">
                         <h4>Rochester Institute of Technology (RIT)</h4>
                         <h5>MS Information Technology and Analytics</h5>
                         <p>Rochester, NY</p>
+                        <ul>
+                            <li>Relevant Coursework: Visual Analytics, Foundation of Data Science and Analytics (ML), Non-Relational Data Management, Information Retrieval, Data Mining, Information Assurance Fundamentals.</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item experience-item">
                     <div class="timeline-date">Aug 2022 - Jul 2023 <span class="duration">(11 mos)</span></div>
                     <div class="timeline-content">
                         <h4>Dark Horse Digital Solutions</h4>
                         <h5>Data Scientist</h5>
+                        <p>As a Data Scientist at Dark Horse Digital Solutions, I spearheaded the design and deployment of XGBoost ensemble models for financial fraud detection, achieving 95% accuracy and reducing false positives by 35%. I directed a cross-departmental MLOps initiative, integrating PostgreSQL for 99.9% uptime, and implemented A/B testing pipelines to validate deep learning models, communicating results to leadership.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item experience-item">
                     <div class="timeline-date">Jun 2021 - Jul 2022 <span class="duration">(1 yr 1 mo)</span></div>
                     <div class="timeline-content">
                         <h4>Dark Horse Digital Solutions</h4>
                         <h5>Data Scientist</h5>
+                        <p>During my earlier tenure at Dark Horse Digital Solutions, I developed machine learning models for a COVID-19 risk matrix, enhancing early risk detection accuracy by 20%. I also automated insurance claim workflows using ETL pipelines in Apache Airflow and Spark, reducing manual reviews by 45%, and deployed gradient boosting and NLP models to improve underwriting accuracy, cutting claim denial-related revenue loss by 18%.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item experience-item">
                     <div class="timeline-date">May 2020 - Jul 2020 <span class="duration">(2 mos)</span></div>
                     <div class="timeline-content">
                         <h4>VESIT Renaissance</h4>
                         <h5>Data Analytics Intern</h5>
+                        <p>As a Data Analytics Intern at VESIT Renaissance, I developed a Python-based analytics dashboard with a PostgreSQL backend to track institutional KPIs, improving academic decision-making efficiency by 30%. I also designed large-scale data validation processes in Apache Spark, applying anomaly detection to enhance data quality by 20% and reduce processing errors.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
+                <div class="timeline-item education-item">
                     <div class="timeline-date">Jul 2017 - May 2021 <span class="duration">(3 yrs 10 mos)</span></div>
                     <div class="timeline-content">
                         <h4>University of Mumbai</h4>
-                        <h5>BS in Computer Engineering</h5>
+                        <h5>Bachelor of Engineering in Computer Engineering</h5>
                         <p>Mumbai, India</p>
+                        <ul>
+                            <li>Relevant Coursework: Artificial Intelligence, Software Engineering, Machine Learning, Analysis of Algorithms, Data Warehousing.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <h3>Certifications</h3>
-            <ul>
-                <li><strong>Microsoft Certified: Azure Data Scientist Associate:</strong> Credential ID: C2F98ADE9E9ECB9D</li>
-            </ul>
         </section>
         <section id="projects" class="fade-in-section">
             <h2>Projects</h2>
@@ -136,11 +174,11 @@
     </footer>
     <script>
         const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]'); // Selects only internal links
 
         const options = {
             root: null, // viewport
-            threshold: 0.5 // 50% of the section must be visible
+            threshold: 0.1 // 10% of the section must be visible
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
@@ -149,7 +187,8 @@
                     const id = entry.target.id;
                     navLinks.forEach(link => {
                         link.classList.remove('active-nav-link');
-                        if (link.getAttribute('href').includes(id)) {
+                        const linkHrefId = link.getAttribute('href').substring(1); // Get ID from href
+                        if (linkHrefId === id) {
                             link.classList.add('active-nav-link');
                         }
                     });
@@ -177,6 +216,21 @@
 
         fadeSections.forEach(section => {
             fadeObserver.observe(section);
+        });
+
+        // Hamburger menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navLinksContainer = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinksContainer.classList.toggle('active');
+        });
+
+        // Close mobile menu when a nav link is clicked
+        navLinksContainer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinksContainer.classList.remove('active');
+            });
         });
     </script>
 </body>
