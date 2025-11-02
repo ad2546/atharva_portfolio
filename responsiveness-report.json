@@ -1,0 +1,817 @@
+{
+  "timestamp": "2025-11-01T20:08:45.424Z",
+  "results": [
+    {
+      "viewport": "Mobile-iPhone-SE",
+      "dimensions": "375x667",
+      "description": "iPhone SE",
+      "issues": [
+        "Text overflow detected in H1: \"\n                    Atharva Deshmukh\n            ...\"",
+        "Text overflow detected in H2: \"About Me...\"",
+        "Text overflow detected in H2: \"My Journey...\"",
+        "Text overflow detected in H2: \"Featured Projects...\""
+      ],
+      "elementChecks": [
+        {
+          "name": "Navigation Bar",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 57
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "375px",
+            "height": "57px"
+          }
+        },
+        {
+          "name": "Mobile Menu Button",
+          "visible": true,
+          "boundingBox": {
+            "x": 24,
+            "y": 13,
+            "width": 24,
+            "height": 24
+          },
+          "computedStyle": {
+            "display": "inline-block",
+            "overflow": "visible",
+            "width": "24px",
+            "height": "24px"
+          }
+        },
+        {
+          "name": "Hero Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 615.75
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "hidden",
+            "width": "375px",
+            "height": "615.75px"
+          }
+        },
+        {
+          "name": "Hero Title",
+          "visible": true,
+          "boundingBox": {
+            "x": 24,
+            "y": 128,
+            "width": 327,
+            "height": 84
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "327px",
+            "height": "84px"
+          }
+        },
+        {
+          "name": "Hero Buttons",
+          "visible": true,
+          "boundingBox": {
+            "x": 108.78125,
+            "y": 427.75,
+            "width": 157.4375,
+            "height": 44
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "157.438px",
+            "height": "44px"
+          }
+        },
+        {
+          "name": "About Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 615.75,
+            "width": 375,
+            "height": 1498.1875
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "375px",
+            "height": "1498.19px"
+          }
+        },
+        {
+          "name": "Skills Grid",
+          "visible": true,
+          "boundingBox": {
+            "x": 24,
+            "y": 1253.9375,
+            "width": 327,
+            "height": 520
+          },
+          "computedStyle": {
+            "display": "grid",
+            "overflow": "visible",
+            "width": "327px",
+            "height": "520px"
+          }
+        },
+        {
+          "name": "Journey Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 2113.9375,
+            "width": 375,
+            "height": 2804.1875
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "375px",
+            "height": "2804.19px"
+          }
+        },
+        {
+          "name": "Timeline Items",
+          "visible": true,
+          "boundingBox": {
+            "x": 24,
+            "y": 2313.125,
+            "width": 327,
+            "height": 365.25
+          },
+          "computedStyle": {
+            "display": "flex",
+            "overflow": "visible",
+            "width": "327px",
+            "height": "365.25px"
+          }
+        },
+        {
+          "name": "Timeline Line",
+          "visible": false
+        },
+        {
+          "name": "Projects Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 4918.125,
+            "width": 375,
+            "height": 2611.9375
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "375px",
+            "height": "2611.94px"
+          }
+        },
+        {
+          "name": "Project Cards Grid",
+          "visible": true,
+          "boundingBox": {
+            "x": 24,
+            "y": 5117.3125,
+            "width": 327,
+            "height": 2332.75
+          },
+          "computedStyle": {
+            "display": "grid",
+            "overflow": "visible",
+            "width": "327px",
+            "height": "2332.75px"
+          }
+        },
+        {
+          "name": "Footer",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 7530.0625,
+            "width": 375,
+            "height": 438
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "375px",
+            "height": "438px"
+          }
+        }
+      ]
+    },
+    {
+      "viewport": "Mobile-iPhone-11-Pro",
+      "dimensions": "414x896",
+      "description": "iPhone 11 Pro",
+      "issues": [
+        "Text overflow detected in H1: \"\n                    Atharva Deshmukh\n            ...\"",
+        "Text overflow detected in H2: \"About Me...\"",
+        "Text overflow detected in H2: \"My Journey...\"",
+        "Text overflow detected in H2: \"Featured Projects...\""
+      ],
+      "elementChecks": [
+        {
+          "name": "Navigation Bar",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 0,
+            "width": 414,
+            "height": 57
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "414px",
+            "height": "57px"
+          }
+        },
+        {
+          "name": "Mobile Menu Button",
+          "visible": true,
+          "boundingBox": {
+            "x": 24,
+            "y": 13,
+            "width": 24,
+            "height": 24
+          },
+          "computedStyle": {
+            "display": "inline-block",
+            "overflow": "visible",
+            "width": "24px",
+            "height": "24px"
+          }
+        },
+        {
+          "name": "Hero Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 0,
+            "width": 414,
+            "height": 573.75
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "hidden",
+            "width": "414px",
+            "height": "573.75px"
+          }
+        },
+        {
+          "name": "Hero Title",
+          "visible": true,
+          "boundingBox": {
+            "x": 24,
+            "y": 128,
+            "width": 366,
+            "height": 42
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "366px",
+            "height": "42px"
+          }
+        },
+        {
+          "name": "Hero Buttons",
+          "visible": true,
+          "boundingBox": {
+            "x": 128.28125,
+            "y": 385.75,
+            "width": 157.4375,
+            "height": 44
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "157.438px",
+            "height": "44px"
+          }
+        },
+        {
+          "name": "About Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 573.75,
+            "width": 414,
+            "height": 1391.6875
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "414px",
+            "height": "1391.69px"
+          }
+        },
+        {
+          "name": "Skills Grid",
+          "visible": true,
+          "boundingBox": {
+            "x": 24,
+            "y": 1153.4375,
+            "width": 366,
+            "height": 520
+          },
+          "computedStyle": {
+            "display": "grid",
+            "overflow": "visible",
+            "width": "366px",
+            "height": "520px"
+          }
+        },
+        {
+          "name": "Journey Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 1965.4375,
+            "width": 414,
+            "height": 2711.9375
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "414px",
+            "height": "2711.94px"
+          }
+        },
+        {
+          "name": "Timeline Items",
+          "visible": true,
+          "boundingBox": {
+            "x": 24,
+            "y": 2164.625,
+            "width": 366,
+            "height": 365.25
+          },
+          "computedStyle": {
+            "display": "flex",
+            "overflow": "visible",
+            "width": "366px",
+            "height": "365.25px"
+          }
+        },
+        {
+          "name": "Timeline Line",
+          "visible": false
+        },
+        {
+          "name": "Projects Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 4677.375,
+            "width": 414,
+            "height": 2538.4375
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "414px",
+            "height": "2538.44px"
+          }
+        },
+        {
+          "name": "Project Cards Grid",
+          "visible": true,
+          "boundingBox": {
+            "x": 24,
+            "y": 4876.5625,
+            "width": 366,
+            "height": 2259.25
+          },
+          "computedStyle": {
+            "display": "grid",
+            "overflow": "visible",
+            "width": "366px",
+            "height": "2259.25px"
+          }
+        },
+        {
+          "name": "Footer",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 7215.8125,
+            "width": 414,
+            "height": 438
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "414px",
+            "height": "438px"
+          }
+        }
+      ]
+    },
+    {
+      "viewport": "Tablet-iPad",
+      "dimensions": "768x1024",
+      "description": "iPad",
+      "issues": [
+        "Text overflow detected in H1: \"\n                    Atharva Deshmukh\n            ...\"",
+        "Text overflow detected in H2: \"About Me...\"",
+        "Text overflow detected in H2: \"My Journey...\"",
+        "Text overflow detected in H2: \"Featured Projects...\""
+      ],
+      "elementChecks": [
+        {
+          "name": "Navigation Bar",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 57
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "768px",
+            "height": "57px"
+          }
+        },
+        {
+          "name": "Mobile Menu Button",
+          "visible": false
+        },
+        {
+          "name": "Hero Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 0,
+            "width": 768,
+            "height": 500.453125
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "hidden",
+            "width": "768px",
+            "height": "500.453px"
+          }
+        },
+        {
+          "name": "Hero Title",
+          "visible": true,
+          "boundingBox": {
+            "x": 24,
+            "y": 128,
+            "width": 720,
+            "height": 56.453125
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "720px",
+            "height": "56.4531px"
+          }
+        },
+        {
+          "name": "Hero Buttons",
+          "visible": true,
+          "boundingBox": {
+            "x": 224.28125,
+            "y": 374.453125,
+            "width": 157.4375,
+            "height": 44
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "157.438px",
+            "height": "44px"
+          }
+        },
+        {
+          "name": "About Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 500.453125,
+            "width": 768,
+            "height": 898.234375
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "768px",
+            "height": "898.234px"
+          }
+        },
+        {
+          "name": "Skills Grid",
+          "visible": true,
+          "boundingBox": {
+            "x": 24,
+            "y": 962.6875,
+            "width": 720,
+            "height": 172
+          },
+          "computedStyle": {
+            "display": "grid",
+            "overflow": "visible",
+            "width": "720px",
+            "height": "172px"
+          }
+        },
+        {
+          "name": "Journey Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 1398.6875,
+            "width": 768,
+            "height": 1692.734375
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "768px",
+            "height": "1692.73px"
+          }
+        },
+        {
+          "name": "Timeline Items",
+          "visible": true,
+          "boundingBox": {
+            "x": 24,
+            "y": 1604.921875,
+            "width": 720,
+            "height": 222.25
+          },
+          "computedStyle": {
+            "display": "flex",
+            "overflow": "visible",
+            "width": "720px",
+            "height": "222.25px"
+          }
+        },
+        {
+          "name": "Timeline Line",
+          "visible": false
+        },
+        {
+          "name": "Projects Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 3091.421875,
+            "width": 768,
+            "height": 1437.984375
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "768px",
+            "height": "1437.98px"
+          }
+        },
+        {
+          "name": "Project Cards Grid",
+          "visible": true,
+          "boundingBox": {
+            "x": 24,
+            "y": 3297.65625,
+            "width": 720,
+            "height": 1151.75
+          },
+          "computedStyle": {
+            "display": "grid",
+            "overflow": "visible",
+            "width": "720px",
+            "height": "1151.75px"
+          }
+        },
+        {
+          "name": "Footer",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 4529.40625,
+            "width": 768,
+            "height": 262
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "768px",
+            "height": "262px"
+          }
+        }
+      ]
+    },
+    {
+      "viewport": "Desktop",
+      "dimensions": "1920x1080",
+      "description": "Desktop",
+      "issues": [
+        "Text overflow detected in H1: \"\n                    Atharva Deshmukh\n            ...\"",
+        "Text overflow detected in H2: \"About Me...\"",
+        "Text overflow detected in H2: \"My Journey...\"",
+        "Text overflow detected in H2: \"Featured Projects...\""
+      ],
+      "elementChecks": [
+        {
+          "name": "Navigation Bar",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 57
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "1920px",
+            "height": "57px"
+          }
+        },
+        {
+          "name": "Mobile Menu Button",
+          "visible": false
+        },
+        {
+          "name": "Hero Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 544.796875
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "hidden",
+            "width": "1920px",
+            "height": "544.797px"
+          }
+        },
+        {
+          "name": "Hero Title",
+          "visible": true,
+          "boundingBox": {
+            "x": 470,
+            "y": 128,
+            "width": 980,
+            "height": 100.796875
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "980px",
+            "height": "100.797px"
+          }
+        },
+        {
+          "name": "Hero Buttons",
+          "visible": true,
+          "boundingBox": {
+            "x": 800.28125,
+            "y": 418.796875,
+            "width": 157.4375,
+            "height": 44
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "157.438px",
+            "height": "44px"
+          }
+        },
+        {
+          "name": "About Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 544.796875,
+            "width": 1920,
+            "height": 917.59375
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "1920px",
+            "height": "917.594px"
+          }
+        },
+        {
+          "name": "Skills Grid",
+          "visible": true,
+          "boundingBox": {
+            "x": 470,
+            "y": 1026.390625,
+            "width": 980,
+            "height": 172
+          },
+          "computedStyle": {
+            "display": "grid",
+            "overflow": "visible",
+            "width": "980px",
+            "height": "172px"
+          }
+        },
+        {
+          "name": "Journey Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 1462.390625,
+            "width": 1920,
+            "height": 1621.09375
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "1920px",
+            "height": "1621.09px"
+          }
+        },
+        {
+          "name": "Timeline Items",
+          "visible": true,
+          "boundingBox": {
+            "x": 470,
+            "y": 1687.984375,
+            "width": 980,
+            "height": 199.5
+          },
+          "computedStyle": {
+            "display": "flex",
+            "overflow": "visible",
+            "width": "980px",
+            "height": "199.5px"
+          }
+        },
+        {
+          "name": "Timeline Line",
+          "visible": false
+        },
+        {
+          "name": "Projects Section",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 3083.484375,
+            "width": 1920,
+            "height": 1146.34375
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "1920px",
+            "height": "1146.34px"
+          }
+        },
+        {
+          "name": "Project Cards Grid",
+          "visible": true,
+          "boundingBox": {
+            "x": 360,
+            "y": 3309.078125,
+            "width": 1200,
+            "height": 840.75
+          },
+          "computedStyle": {
+            "display": "grid",
+            "overflow": "visible",
+            "width": "1200px",
+            "height": "840.75px"
+          }
+        },
+        {
+          "name": "Footer",
+          "visible": true,
+          "boundingBox": {
+            "x": 0,
+            "y": 4229.828125,
+            "width": 1920,
+            "height": 262
+          },
+          "computedStyle": {
+            "display": "block",
+            "overflow": "visible",
+            "width": "1920px",
+            "height": "262px"
+          }
+        }
+      ]
+    }
+  ]
+}

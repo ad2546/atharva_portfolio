@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-responsiveness-testing",
+  "version": "1.0.0",
+  "description": "Responsiveness testing for Atharva's portfolio",
+  "main": "test-responsiveness.js",
+  "scripts": {
+    "test": "node test-responsiveness.js"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}

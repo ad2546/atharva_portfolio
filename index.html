@@ -1,237 +1,1004 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" style="scroll-behavior: smooth;">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atharva Deshmukh</title>
-    <link rel="stylesheet" href="styles/revamped_style.css">
+    <title>Atharva Deshmukh | Data Scientist & AI Engineer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>📊</text></svg>">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'data-blue': '#2563eb',
+                        'data-purple': '#7c3aed',
+                        'data-teal': '#14b8a6',
+                        'data-orange': '#f97316',
+                        'data-pink': '#ec4899',
+                        'navy': '#0f172a',
+                        'slate-950': '#020617',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Glassmorphism for Light Theme */
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover Effects - Subtle */
+        .hover-lift {
+            transition: box-shadow 0.2s ease;
+        }
+
+        .hover-lift:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Profile Image */
+        .profile-img {
+            border: 4px solid rgba(37, 99, 235, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Skill Bar - No Animation */
+        .skill-bar {
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
+        }
+
+        /* Card Glow */
+        .card-glow {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .card-glow:hover::before {
+            left: 100%;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899);
+            z-index: 9999;
+            transform-origin: left;
+        }
+
+        /* Custom Scrollbar - Light Theme */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #2563eb;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1d4ed8;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <div class="header-text">
-            <h1>Atharva Deshmukh</h1>
-            <p>Exploring new heights with Data & AI</p>
+<body class="bg-gray-50 text-gray-900 overflow-x-hidden">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 shadow-lg backdrop-blur-md" style="background-color: rgba(147, 51, 234, 0.8);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gradient-to-br from-white to-purple-100 bg-opacity-80 flex items-center justify-center text-lg font-bold text-purple-700 shadow-lg backdrop-blur-sm" style="background-color: rgba(255, 255, 255, 0.2);">
+                        AD
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="nav-link text-purple-100 hover:text-white transition-colors">About</a>
+                    <a href="#experience" class="nav-link text-purple-100 hover:text-white transition-colors">Experience</a>
+                    <a href="#skills" class="nav-link text-purple-100 hover:text-white transition-colors">Skills</a>
+                    <a href="#projects" class="nav-link text-purple-100 hover:text-white transition-colors">Projects</a>
+                    <a href="#certifications" class="nav-link text-purple-100 hover:text-white transition-colors">Certifications</a>
+                    <a href="#contact" class="nav-link text-purple-100 hover:text-white transition-colors">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
-        <a href="#about" class="scroll-down-icon" aria-label="Scroll down to About Me section">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </a>
-    </header>
-    <nav>
-        <span class="nav-logo">Atharva Deshmukh</span>
-        <button class="hamburger" aria-label="Toggle navigation menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <div class="nav-links">
-            <a href="#about">About Me</a>
-            <a href="#my-journey">My Journey</a>
-            <a href="#projects">Projects</a>
-            <a href="https://www.linkedin.com/in/atharva-deshmuk/" target="_blank">LinkedIn</a>
-            <a href="resumes/Atharva_Deshmukh_Data_Scientist (4).pdf" target="_blank">Resume</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-purple-400 backdrop-blur-md" style="background-color: rgba(126, 34, 206, 0.9);">
+            <div class="px-4 py-3 space-y-3">
+                <a href="#about" class="nav-link block text-purple-100 hover:text-white transition-colors">About</a>
+                <a href="#experience" class="nav-link block text-purple-100 hover:text-white transition-colors">Experience</a>
+                <a href="#skills" class="nav-link block text-purple-100 hover:text-white transition-colors">Skills</a>
+                <a href="#projects" class="nav-link block text-purple-100 hover:text-white transition-colors">Projects</a>
+                <a href="#certifications" class="nav-link block text-purple-100 hover:text-white transition-colors">Certifications</a>
+                <a href="#contact" class="nav-link block text-purple-100 hover:text-white transition-colors">Contact</a>
+            </div>
         </div>
     </nav>
-    <main>
-        <section id="about" class="fade-in-section">
-            <h2>About Me</h2>
-            
-            <p>I am a Data Scientist and AI Engineer with 3+ years of experience designing and deploying machine learning, deep learning, and generative AI systems across finance, healthcare, and sustainability domains. My work spans from building fraud detection models with 95% accuracy, to developing geospatial AI pipelines for wildfire prevention, and engineering LLM-powered multi-agent systems for resume–job matching. Skilled in Python, SQL, Spark, TensorFlow, PyTorch, LangChain, and MLOps (MLflow, Kubernetes, CI/CD), I specialize in transforming raw data into business-ready insights and production-scale solutions. With strong foundations in cloud platforms (AWS, Azure, GCP) and data engineering pipelines, I focus on creating AI systems that are explainable, scalable, and business-driven.</p>
-            
-            <h3>Skills</h3>
-            <div class="skills-category">
-                <h4>Data Analysis and Visualizations:</h4>
-                <p>Python (Pandas, NumPy, Matplotlib, Scikit-learn), SQL, Tableau, Power BI, MS Excel (advanced), Looker</p>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 bg-white">
+        <!-- Gradient Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 opacity-60"></div>
+        <div class="absolute inset-0 bg-gradient-to-tr from-cyan-50 via-transparent to-orange-50"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h2 class="text-blue-400 font-semibold text-lg tracking-wide">👋 Hello, I'm</h2>
+                        <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                            <span class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                                Atharva Deshmukh
+                            </span>
+                        </h1>
+                        <h3 class="text-2xl md:text-3xl font-semibold text-gray-700">
+                            Data Scientist & AI Engineer
+                        </h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Transforming data into intelligent solutions with 3+ years of experience in Machine Learning, Deep Learning, and Generative AI across finance, healthcare, and sustainability domains.
+                        </p>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="px-8 py-4 bg-blue-600 rounded-full text-white font-semibold hover:bg-blue-700 transition-colors inline-flex items-center gap-2">
+                            <span>View Projects</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                            </svg>
+                        </a>
+                        <a href="resumes/Atharva_Deshmukh_Data_Scientist (4).pdf" target="_blank" class="px-8 py-4 border-2 border-blue-600 rounded-full text-blue-600 font-semibold hover:bg-blue-50 transition-colors inline-flex items-center gap-2">
+                            <span>Download Resume</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex gap-4">
+                        <a href="https://github.com/ad2546" target="_blank" class="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors group">
+                            <svg class="w-6 h-6 text-gray-600 group-hover:text-blue-600 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/atharva-deshmuk/" target="_blank" class="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors group">
+                            <svg class="w-6 h-6 text-gray-600 group-hover:text-blue-600 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:ad2546@rit.edu" class="w-12 h-12 glass rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors group">
+                            <svg class="w-6 h-6 text-gray-600 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Image -->
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <img src="assets/media/Spring_2025_CareerFairHeadshots_286.jpg"
+                             alt="Atharva Deshmukh"
+                             class="w-80 h-80 md:w-96 md:h-96 object-cover object-center rounded-full profile-img"
+                             style="object-position: center 20%;">
+                    </div>
+                </div>
             </div>
-            <div class="skills-category">
-                <h4>Programming Languages:</h4>
-                <p>Python, SQL, R, Java, JavaScript, NoSQL, C</p>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 relative bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center glass rounded-2xl p-8 hover-lift">
+                    <div class="text-5xl font-bold text-blue-600 mb-2">3+</div>
+                    <div class="text-gray-600 font-medium">Years Experience</div>
+                </div>
+                <div class="text-center glass rounded-2xl p-8 hover-lift">
+                    <div class="text-5xl font-bold text-purple-600 mb-2">8+</div>
+                    <div class="text-gray-600 font-medium">Projects Delivered</div>
+                </div>
+                <div class="text-center glass rounded-2xl p-8 hover-lift">
+                    <div class="text-5xl font-bold text-pink-600 mb-2">2</div>
+                    <div class="text-gray-600 font-medium">Cloud Certifications</div>
+                </div>
             </div>
-            <div class="skills-category">
-                <h4>Databases and Tools:</h4>
-                <p>MongoDB, MS SQL Server, Oracle SQL, Snowflake, JDBC, SAS, Kettle, REST API, SOAP API</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">About Me</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
             </div>
 
-            <h3>Certifications</h3>
-            <ul>
-                <li><strong>Microsoft Certified: Azure Data Scientist Associate:</strong> Credential ID: C2F98ADE9E9ECB9D</li>
-            </ul>
-        </section>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        I am a passionate <span class="text-blue-600 font-semibold">Data Scientist and AI Engineer</span> with over 3 years of experience designing and deploying cutting-edge machine learning, deep learning, and generative AI systems.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        My expertise spans across multiple domains including <span class="text-purple-600 font-semibold">finance, healthcare, and sustainability</span>. I specialize in building end-to-end ML pipelines, from data preprocessing and feature engineering to model deployment and monitoring.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Currently pursuing my <span class="text-pink-600 font-semibold">Master's in Information Technology and Analytics</span> at Rochester Institute of Technology, I'm focused on advancing the field of AI through innovative solutions and research.
+                    </p>
+                    <div class="flex gap-4 pt-4">
+                        <div class="glass rounded-lg p-4 flex-1">
+                            <div class="text-3xl font-bold text-blue-600">MS</div>
+                            <div class="text-sm text-gray-600">IT & Analytics</div>
+                        </div>
+                        <div class="glass rounded-lg p-4 flex-1">
+                            <div class="text-3xl font-bold text-purple-600">BE</div>
+                            <div class="text-sm text-gray-600">Computer Eng.</div>
+                        </div>
+                    </div>
+                </div>
 
-        <section id="my-journey" class="fade-in-section">
-            <h2>My Journey</h2>
-            <div class="timeline-container">
-                <div class="timeline-item experience-item">
-                    <div class="timeline-date">Sep 2025 - Present <span class="duration">(0 yrs 0 mos)</span></div>
-                    <div class="timeline-content">
-                        <h4>CrowdDoing NGO</h4>
-                        <h5>Solutions Architect AI Integration</h5>
-                        <p>At CrowdDoing NGO, I applied deep learning and geospatial AI to identify high-risk fire zones, reducing false positive alerts by 30% and optimizing resource allocation. I collaborated with stakeholders to develop real-time dashboards and decision support systems, accelerating response times by 25% during catastrophic fire events and improving crisis communication.</p>
+                <div class="space-y-4">
+                    <div class="glass rounded-2xl p-6 card-glow">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2 text-gray-900">Data Science</h4>
+                                <p class="text-gray-600 text-sm">Statistical analysis, predictive modeling, and data visualization expertise</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item education-item">
-                    <div class="timeline-date">Aug 2023 - May 2025 <span class="duration">(1 yr 9 mos)</span></div>
-                    <div class="timeline-content">
-                        <h4>Rochester Institute of Technology (RIT)</h4>
-                        <h5>MS Information Technology and Analytics</h5>
-                        <p>Rochester, NY</p>
-                        <ul>
-                            <li>Relevant Coursework: Visual Analytics, Foundation of Data Science and Analytics (ML), Non-Relational Data Management, Information Retrieval, Data Mining, Information Assurance Fundamentals.</li>
-                        </ul>
+
+                    <div class="glass rounded-2xl p-6 card-glow">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2 text-gray-900">Machine Learning</h4>
+                                <p class="text-gray-600 text-sm">Deep learning, neural networks, and ensemble methods for complex problems</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item experience-item">
-                    <div class="timeline-date">Aug 2022 - Jul 2023 <span class="duration">(11 mos)</span></div>
-                    <div class="timeline-content">
-                        <h4>Dark Horse Digital Solutions</h4>
-                        <h5>Data Scientist</h5>
-                        <p>As a Data Scientist at Dark Horse Digital Solutions, I spearheaded the design and deployment of XGBoost ensemble models for financial fraud detection, achieving 95% accuracy and reducing false positives by 35%. I directed a cross-departmental MLOps initiative, integrating PostgreSQL for 99.9% uptime, and implemented A/B testing pipelines to validate deep learning models, communicating results to leadership.</p>
-                    </div>
-                </div>
-                <div class="timeline-item experience-item">
-                    <div class="timeline-date">Jun 2021 - Jul 2022 <span class="duration">(1 yr 1 mo)</span></div>
-                    <div class="timeline-content">
-                        <h4>Dark Horse Digital Solutions</h4>
-                        <h5>Data Scientist</h5>
-                        <p>During my earlier tenure at Dark Horse Digital Solutions, I developed machine learning models for a COVID-19 risk matrix, enhancing early risk detection accuracy by 20%. I also automated insurance claim workflows using ETL pipelines in Apache Airflow and Spark, reducing manual reviews by 45%, and deployed gradient boosting and NLP models to improve underwriting accuracy, cutting claim denial-related revenue loss by 18%.</p>
-                    </div>
-                </div>
-                <div class="timeline-item experience-item">
-                    <div class="timeline-date">May 2020 - Jul 2020 <span class="duration">(2 mos)</span></div>
-                    <div class="timeline-content">
-                        <h4>VESIT Renaissance</h4>
-                        <h5>Data Analytics Intern</h5>
-                        <p>As a Data Analytics Intern at VESIT Renaissance, I developed a Python-based analytics dashboard with a PostgreSQL backend to track institutional KPIs, improving academic decision-making efficiency by 30%. I also designed large-scale data validation processes in Apache Spark, applying anomaly detection to enhance data quality by 20% and reduce processing errors.</p>
-                    </div>
-                </div>
-                <div class="timeline-item education-item">
-                    <div class="timeline-date">Jul 2017 - May 2021 <span class="duration">(3 yrs 10 mos)</span></div>
-                    <div class="timeline-content">
-                        <h4>University of Mumbai</h4>
-                        <h5>Bachelor of Engineering in Computer Engineering</h5>
-                        <p>Mumbai, India</p>
-                        <ul>
-                            <li>Relevant Coursework: Artificial Intelligence, Software Engineering, Machine Learning, Analysis of Algorithms, Data Warehousing.</li>
-                        </ul>
+
+                    <div class="glass rounded-2xl p-6 card-glow">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg mb-2 text-gray-900">Generative AI</h4>
+                                <p class="text-gray-600 text-sm">LLMs, RAG systems, and multi-agent AI architectures</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="projects" class="fade-in-section">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>LLM Based Resume Scorer</h3>
-                    <p class="project-domain">Agentic AI</p>
-                    <p>An AI-powered application that leverages large language models to predict and optimize resume–job description matches for improved ATS screening.</p>
-                    <a href="https://github.com/ad2546/LLM_ATS" target="_blank">View Project</a>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 relative bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Professional Journey</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Experience Item -->
+                <div class="glass rounded-2xl p-8 hover-lift card-glow">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-1">Solutions Architect AI Integration</h3>
+                            <h4 class="text-xl text-blue-600 font-semibold">CrowdDoing NGO</h4>
+                        </div>
+                        <div class="mt-2 md:mt-0">
+                            <span class="inline-block px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full text-sm font-semibold">
+                                Sep 2025 - Present
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        Applied deep learning and geospatial AI to identify high-risk fire zones, reducing false positive alerts by 30% and optimizing resource allocation for wildfire prevention initiatives.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Deep Learning</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">Geospatial AI</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">Computer Vision</span>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>Vizard AI</h3>
-                    <p class="project-domain">Agentic AI</p>
-                    <p>Created an AI platform using Langchain to generate business relevant visualizations.</p>
-                    <a href="https://data-viz-app-2y326jhgfa-uc.a.run.app/" target="_blank">View Project</a>
+
+                <!-- Experience Item -->
+                <div class="glass rounded-2xl p-8 hover-lift card-glow">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1">Data Scientist</h3>
+                            <h4 class="text-xl text-blue-400 font-semibold">Dark Horse Digital Solutions</h4>
+                        </div>
+                        <div class="mt-2 md:mt-0">
+                            <span class="inline-block px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-sm font-semibold">
+                                Aug 2022 - Jul 2023
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-2">
+                        Spearheaded XGBoost ensemble models for financial fraud detection, achieving 95% accuracy. Directed MLOps initiatives with PostgreSQL for 99.9% uptime.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Built fraud detection models processing 1M+ transactions daily</li>
+                        <li>Implemented CI/CD pipelines for model deployment</li>
+                        <li>Optimized database queries reducing latency by 40%</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">XGBoost</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">MLOps</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">PostgreSQL</span>
+                    </div>
                 </div>
-                <div class="project-card">
-                    <h3>Smoking Analysis Dashboard</h3>
-                    <p class="project-domain">Data Analysis</p>
-                    <p>An interactive dashboard that visualizes smoking trends, health impacts, and demographic patterns to support data-driven public health insights.</p>
-                    <a href="https://public.tableau.com/views/Smoking_Study_Analysis/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Stars Yapp: A Generative AI Based Astrology Predictor</h3>
-                    <p class="project-domain">Agentic AI</p>
-                    <p>A generative AI-powered astrology predictor that delivers personalized horoscope insights using LLMs and retrieval-augmented generation.</p>
-                    <a href="https://www.youtube.com/watch?v=4a222XViI38" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Deploying Machine Learning model on AWS Sagemaker</h3>
-                    <p class="project-domain">Machine Learning</p>
-                    <p>Built a machine learning model to predict phone prices and deployed it as a scalable application on AWS.</p>
-                    <a href="https://colab.research.google.com/drive/1NpvpR29D5jOViSEGs63yO-cRe9jra8qP?usp=sharing" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Analysing Formula 1 telemetry data</h3>
-                    <p class="project-domain">Data Analysis</p>
-                    <p>Analyzed Formula 1 telemetry data to model driver performance and build predictive insights into race outcomes.</p>
-                    <a href="https://www.linkedin.com/posts/atharva-deshmuk_f1-datascience-rstats-activity-7314843030400745473-1lvi?utm_source=share&utm_medium=member_desktop&rcm=ACoAACvvykkB_ecNOQ0g9IiEsMqRyDPTRJawVsk" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Utilizing unstructred data to predict customer churn in telecom provider</h3>
-                    <p class="project-domain">Machine Learning</p>
-                    <p>Built an NLP-based model to predict customer churn by analyzing text data such as reviews and support interactions, enabling proactive retention strategies.</p>
-                    <a href="https://colab.research.google.com/drive/1AUi7Vk49G97ErD0HoGQoXSwnAHXoPPqq?usp=sharing" target="_blank">View Project</a>
+
+                <!-- Experience Item -->
+                <div class="glass rounded-2xl p-8 hover-lift card-glow">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-1">Data Scientist</h3>
+                            <h4 class="text-xl text-blue-400 font-semibold">Dark Horse Digital Solutions</h4>
+                        </div>
+                        <div class="mt-2 md:mt-0">
+                            <span class="inline-block px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full text-sm font-semibold">
+                                Jun 2021 - Jul 2022
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed mb-2">
+                        Developed ML models for COVID-19 risk matrix, enhancing early risk detection by 20%. Automated insurance workflows using ETL pipelines.
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Created predictive models for healthcare risk assessment</li>
+                        <li>Designed ETL pipelines processing 500K+ records daily</li>
+                        <li>Reduced manual workflow time by 60% through automation</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">Machine Learning</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">ETL</span>
+                        <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">Healthcare AI</span>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer class="fade-in-section">
-        <p>&copy; 2024 Atharva Deshmukh | All Rights Reserved</p>
-        <ul>
-            <li>Email: <a href="mailto:ad2546@rit.edu">ad2546@rit.edu</a></li>
-            <li>GitHub: <a href="https://github.com/ad2546">View Profile</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/atharva-deshmuk/">Connect Here</a></li>
-        </ul>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 relative bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Technical Skills</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Skill Category -->
+                <div class="glass rounded-2xl p-6 hover-lift">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Programming</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-700 w-20">Python</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full skill-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-700 w-20">SQL</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-700 w-20">R</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-700 w-20">Java</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full skill-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category -->
+                <div class="glass rounded-2xl p-6 hover-lift">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">ML/DL Frameworks</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-700 w-20">TensorFlow</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-700 w-20">PyTorch</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full skill-bar" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-700 w-20">Scikit-learn</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full skill-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-700 w-20">Keras</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category -->
+                <div class="glass rounded-2xl p-6 hover-lift">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Cloud Platforms</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-700 w-20">AWS</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full skill-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-700 w-20">Azure</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full skill-bar" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-700 w-20">GCP</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full skill-bar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-gray-700 w-20">OCI</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="h-full skill-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category -->
+                <div class="glass rounded-2xl p-6 hover-lift">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Data Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">Pandas</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">NumPy</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">Matplotlib</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">Seaborn</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">Tableau</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-sm">Power BI</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category -->
+                <div class="glass rounded-2xl p-6 hover-lift">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Gen AI & LLMs</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">LangChain</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">LlamaIndex</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">OpenAI API</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">Hugging Face</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">RAG</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">Prompt Eng.</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category -->
+                <div class="glass rounded-2xl p-6 hover-lift">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">MLOps & Tools</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Docker</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Git</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">MLflow</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Airflow</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">Kubernetes</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-sm">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 relative bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Featured Projects</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project Card -->
+                <div class="glass rounded-2xl overflow-hidden hover-lift card-glow">
+                    <div class="h-2 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">Agentic AI</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">LLM Based Resume Scorer</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            AI-powered multi-agent system leveraging LLMs to optimize resume–job description matches for improved ATS screening and candidate evaluation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">LangChain</span>
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">OpenAI</span>
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">Python</span>
+                        </div>
+                        <a href="https://github.com/ad2546/LLM_ATS" target="_blank" class="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium">
+                            <span>View Project</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card -->
+                <div class="glass rounded-2xl overflow-hidden hover-lift card-glow">
+                    <div class="h-2 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-semibold">Agentic AI</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Vizard AI</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            Intelligent AI platform using LangChain to automatically generate business-relevant data visualizations and insights from raw datasets.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">LangChain</span>
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">Streamlit</span>
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">GCP</span>
+                        </div>
+                        <a href="https://data-viz-app-2y326jhgfa-uc.a.run.app/" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium">
+                            <span>View Project</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card -->
+                <div class="glass rounded-2xl overflow-hidden hover-lift card-glow">
+                    <div class="h-2 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-semibold">Agentic AI</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Hamcaller Custom LLM</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            Custom fine-tuned LLM model designed to identify and filter spam calls using advanced NLP techniques to protect users from fraud.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">Ollama</span>
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">Fine-tuning</span>
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">NLP</span>
+                        </div>
+                        <a href="https://ollama.com/ad2546/hamcaller" target="_blank" class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-medium">
+                            <span>View Project</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card -->
+                <div class="glass rounded-2xl overflow-hidden hover-lift card-glow">
+                    <div class="h-2 bg-gradient-to-r from-pink-500 to-rose-500"></div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-xs font-semibold">Agentic AI</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Stars Yapp</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            Generative AI-powered astrology predictor delivering personalized insights using LLMs and RAG architecture for context-aware predictions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">RAG</span>
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">LLMs</span>
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">FastAPI</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=4a222XViI38" target="_blank" class="inline-flex items-center gap-2 text-pink-600 hover:text-pink-700 font-medium">
+                            <span>View Project</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card -->
+                <div class="glass rounded-2xl overflow-hidden hover-lift card-glow">
+                    <div class="h-2 bg-gradient-to-r from-teal-500 to-cyan-500"></div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="px-3 py-1 bg-teal-100 text-teal-700 rounded-full text-xs font-semibold">Data Analysis</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">Formula 1 Telemetry</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            Advanced analytics on F1 telemetry data to model driver performance patterns and build predictive insights for race outcomes.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">R</span>
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">ggplot2</span>
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">Analytics</span>
+                        </div>
+                        <a href="https://www.linkedin.com/posts/atharva-deshmuk_f1-datascience-rstats-activity-7314843030400745473-1lvi" target="_blank" class="inline-flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium">
+                            <span>View Project</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card -->
+                <div class="glass rounded-2xl overflow-hidden hover-lift card-glow">
+                    <div class="h-2 bg-gradient-to-r from-orange-500 to-amber-500"></div>
+                    <div class="p-6">
+                        <div class="mb-4">
+                            <span class="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-semibold">Machine Learning</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-gray-900">ML on AWS Sagemaker</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            End-to-end ML pipeline to predict phone prices using ensemble methods, deployed as scalable REST API on AWS Sagemaker.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">AWS</span>
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">Sagemaker</span>
+                            <span class="text-xs px-2 py-1 bg-gray-200 text-gray-700 rounded">XGBoost</span>
+                        </div>
+                        <a href="https://colab.research.google.com/drive/1NpvpR29D5jOViSEGs63yO-cRe9jra8qP" target="_blank" class="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-medium">
+                            <span>View Project</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 relative bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Certifications</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Certification Card -->
+                <div class="glass rounded-2xl p-8 hover-lift card-glow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2 text-gray-900">Microsoft Certified: Azure Data Scientist Associate</h3>
+                            <p class="text-gray-600 text-sm mb-3">Credential ID: C2F98ADE9E9ECB9D</p>
+                            <a href="https://learn.microsoft.com/api/credentials/share/en-us/AtharvaDeshmukhRITStudent-9181/C2F98ADE9E9ECB9D?sharingId=148EFF2439D616FE" target="_blank" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 text-sm font-medium">
+                                <span>Verify Credential</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certification Card -->
+                <div class="glass rounded-2xl p-8 hover-lift card-glow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold mb-2 text-gray-900">Oracle Cloud Infrastructure 2025 Certified Data Science Professional</h3>
+                            <p class="text-gray-600 text-sm mb-3">Oracle Certification 2025</p>
+                            <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=27F808F86B3EB66F658E43959334DB4C6765ACC045E3BE8E6EB9991A69C75D26" target="_blank" class="inline-flex items-center gap-2 text-red-600 hover:text-red-700 text-sm font-medium">
+                                <span>Verify Credential</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 relative bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Get In Touch</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full mb-8"></div>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    I'm currently open to new opportunities and collaborations. Feel free to reach out if you'd like to discuss data science, AI projects, or just want to connect!
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="mailto:ad2546@rit.edu" class="glass rounded-2xl p-8 text-center hover-lift card-glow group">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold mb-2 text-gray-900">Email</h3>
+                        <p class="text-gray-600 text-sm">ad2546@rit.edu</p>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/atharva-deshmuk/" target="_blank" class="glass rounded-2xl p-8 text-center hover-lift card-glow group">
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold mb-2 text-gray-900">LinkedIn</h3>
+                        <p class="text-gray-600 text-sm">Connect with me</p>
+                    </a>
+
+                    <a href="https://github.com/ad2546" target="_blank" class="glass rounded-2xl p-8 text-center hover-lift card-glow group">
+                        <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold mb-2 text-gray-900">GitHub</h3>
+                        <p class="text-gray-600 text-sm">View my code</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-200 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="text-gray-600 text-sm">
+                    © 2025 Atharva Deshmukh. All rights reserved.
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-gray-600 text-sm">Built with</span>
+                    <span class="text-red-500">❤️</span>
+                    <span class="text-gray-600 text-sm">and</span>
+                    <span class="text-blue-600 font-semibold">Tailwind CSS</span>
+                </div>
+            </div>
+        </div>
     </footer>
+
     <script>
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a[href^="#"]'); // Selects only internal links
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-        const options = {
-            root: null, // viewport
-            threshold: 0.1 // 10% of the section must be visible
-        };
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.id;
-                    navLinks.forEach(link => {
-                        link.classList.remove('active-nav-link');
-                        const linkHrefId = link.getAttribute('href').substring(1); // Get ID from href
-                        if (linkHrefId === id) {
-                            link.classList.add('active-nav-link');
-                        }
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll progress bar
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            scrollProgress.style.width = progress + '%';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 64;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
                     });
                 }
             });
-        }, options);
-
-        sections.forEach(section => {
-            observer.observe(section);
         });
 
-        const fadeSections = document.querySelectorAll('.fade-in-section');
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-        const fadeObserver = new IntersectionObserver((entries, observer) => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    fadeObserver.unobserve(entry.target); // Stop observing once visible
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, {
-            root: null,
-            threshold: 0.1 // Trigger when 10% of the section is visible
+        }, observerOptions);
+
+        // Initially hide elements
+        document.querySelectorAll('section > *').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
         });
 
-        fadeSections.forEach(section => {
-            fadeObserver.observe(section);
-        });
+        // Active section highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
 
-        // Hamburger menu functionality
-        const hamburger = document.querySelector('.hamburger');
-        const navLinksContainer = document.querySelector('.nav-links');
+        function highlightActiveSection() {
+            let current = '';
+            const scrollPosition = window.scrollY + 200; // Offset for better detection
 
-        hamburger.addEventListener('click', () => {
-            navLinksContainer.classList.toggle('active');
-        });
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const sectionBottom = sectionTop + sectionHeight;
 
-        // Close mobile menu when a nav link is clicked
-        navLinksContainer.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinksContainer.classList.remove('active');
+                // Check if the scroll position is within this section
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    current = section.getAttribute('id');
+                }
             });
-        });
+
+            // Special case: if we're at the very bottom of the page, highlight contact
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+                current = 'contact';
+            }
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-white', 'font-bold');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-white', 'font-bold');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightActiveSection);
+        window.addEventListener('load', highlightActiveSection);
     </script>
 </body>
 </html>
