@@ -1,11 +1,20 @@
 # Site Configuration
-title: "Atharva Deshmukh Portfolio"
-description: "A showcase of my work, skills, and experience."
+title: "Atharva Deshmukh | Data Scientist & AI Engineer"
+description: "Portfolio of Atharva Deshmukh, a Data Scientist and AI Engineer building GenAI systems, multi-agent workflows, and production ML solutions."
 author: "Atharva Deshmukh"
-baseurl: "/atharva_portfolio" # Leave blank for user/organization GitHub Pages
-url: "https://ad2546.github.io" # Replace with your username
-theme: minima 
+lang: "en_US"
+baseurl: "/atharva_portfolio"
+url: "https://ad2546.github.io"
+theme: minima
 markdown: kramdown
+logo: "/assets/media/me.JPG"
+
+social:
+  name: "Atharva Deshmukh"
+  links:
+    - "https://github.com/ad2546"
+    - "https://www.linkedin.com/in/atharva-deshmuk/"
+    - "mailto:ad2546@rit.edu"
 
 # Plugins
 plugins:

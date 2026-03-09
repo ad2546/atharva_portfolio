@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ad2546.github.io/atharva_portfolio/sitemap.xml
